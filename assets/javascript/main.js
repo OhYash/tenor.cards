@@ -14,6 +14,7 @@ function processData() {
 	}
 	else if(window.location.href != absolutePath)
 	{
-		window.location.href = absolutePath;
+		// Commenting temporarily as create page is not yet ready
+		// window.location.href = absolutePath;
 	}
 }
