@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Webcard</title>
+
+		<link href="./assets/css/output.css" rel="stylesheet" />
+	</head>
+	<script type="text/javascript" src="./assets/javascript/main.js" > </script>
+	<body class="text-gray-600 font-body" onload="processData()">
+		<!-- Top panel -->
+		<header>
+			<div class="fixed w-full text-gray-800">
+				<div class="flex flex-col w-full px-4 mx-auto  border-gray-2 md:items-center md:justify-between md:flex-row md:px-6 lg:px-20">
+					<a class="px-1 py-1 mt-2 text-sm sm:text-2xl font-bold text-cyan-600 hover:text-cyan-700 focus:ring-2" href="/">Webcard</a>
+					<a class="px-4 py-2 mt-2 text-sm sm:text-lg font-bold focus:ring-2" href="/"> Create your own >> </a>
+				</div>
+			</div>
+		</header>
+
+		<!-- Body -->
+		<main>
+			<div class="min-h-screen bg-purple-100 py-24 flex flex-col justify-center sm:py-12">
+				<div class="relative py-3 sm:max-w-xl sm:mx-auto">
+					<div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-light-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+					<div class="relative px-4 py-6 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+						<div class="max-w-md mx-auto">
+							<div class="divide-y divide-gray-200">
+								<div class="py-4 text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+									<p id='MessageText'>loading...</p>
+								</div>
+								<div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+									<p>Want to create your own Webcard?</p>
+									<a href="https://tailwindcss.com/docs" class="text-cyan-600 hover:text-cyan-700"> Create your own &rarr; </a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Bottom panel -->
+		<footer>
+			<div class="fixed bottom-0 w-full text-gray-500">
+				<div class="flex flex-col w-full px-4 mx-auto border-gray-2 md:items-center md:justify-end md:flex-row md:px-6 lg:px-20">
+					<p class="px-4 py-2 mt-2 italic text-sm sm:text-base">Crafted by <a class="text-yellow-700 focus:ring-2" href="https://ohyash.github.io">OhYash</a></p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
