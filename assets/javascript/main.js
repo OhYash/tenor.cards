@@ -3,20 +3,55 @@ const absolutePath = 'https://tenor.cards/';
 // To encode, use this
 // btoa(encodeURIComponent(""))
 
+/**
+ * ASCII to Unicode (decode Base64 to original data)
+ * @param {string} b64
+ * @return {string}
+ */
+function atou(b64) {
+	return decodeURIComponent(escape(atob(b64)));
+}
+
+/**
+ * Unicode to ASCII (encode data to Base64)
+ * @param {string} data
+ * @return {string}
+ */
+function utoa(data) {
+	return btoa(unescape(encodeURIComponent(data)));
+}
+
 function processPathParams() {
 	var urlParams = new URLSearchParams(location.search);
 	if (urlParams.has('p'))
 	{
-		let dataParam = atob(urlParams.get('p')); // Get and URI decode
-		let decryptedDataParam = decodeURIComponent(dataParam); // base64 decode
+		document.getElementById('dispMsg').style.display = "block";
+		document.getElementById('getMsg').style.display = "none";
+		console.log("gothere");
+		let decryptedDataParam = atou(urlParams.get('p')); // base64 decode
 
 		document.getElementById('MessageText').innerHTML = decryptedDataParam;
 	}
-	else if(window.location.href != absolutePath)
-	{
-		// Commenting temporarily as create page is not yet ready
-		// window.location.href = absolutePath;
+}
+
+function generateProcessedLink() {
+	let text = document.getElementById("textInput").value;
+	if(text != undefined && text.length != 0) {
+		let encodedString = utoa(text);
+		let url = absolutePath + "?p=" + encodedString;
+		
+		document.getElementById('browsableLink').value = url;
+		document.getElementById('urlAccess').style.display = "block";
 	}
+}
+
+function copyToClipboard() {
+	var copyText = document.getElementById("browsableLink");
+
+	copyText.select();
+	copyText.setSelectionRange(0, 99999); // For mobile devices
+
+	document.execCommand("copy");
 }
 
 function dispTextCount() {
