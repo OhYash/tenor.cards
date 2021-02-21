@@ -1,2 +1,2 @@
-# webcard
-Create and share webcards freely
+# tenor.cards
+Create and share message cards freely
