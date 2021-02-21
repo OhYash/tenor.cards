@@ -32,21 +32,25 @@
 					<div class="relative px-4 py-12 bg-white shadow-lg sm:rounded-3xl sm:p-20">
 						<div class="min-w-20 max-w-md mx-auto">
 							<!-- Display zone -->
-							<div id="dispMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+							<div id="dispMsg" class="text-base hidden leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
 								<p id='MessageText'>Nothing but crickets<br/>¯\_( ͡° ͜ʖ ͡°)_/¯</p>
 							</div>
 							<!-- Input zone -->
-							<div style="display: none;" id="getMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+							<div id="getMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
 								<div class="flex flex-col items-center">
 									<textarea id="textInput" name="msg" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none"></textarea>
 								</div>
 								<div>
-									<button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left" >Share</button>
+									<button onclick="generateProcessedLink()" class="bg-light-blue-300 hover:bg-cyan-600 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left">Create card</button>
 									<p class="text-gray-400 py-1 font-bold float-right"><span id="inputCountStat">0</span> / 140</p>
 								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div id="urlAccess" class="relative hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
+					<input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l">
+					<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy text</button>
 				</div>
 			</div>
 		</main>
