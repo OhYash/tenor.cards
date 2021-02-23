@@ -27,7 +27,6 @@ function processPathParams() {
 	{
 		document.getElementById('dispMsg').style.display = "block";
 		document.getElementById('getMsg').style.display = "none";
-		console.log("gothere");
 		let decryptedDataParam = atou(urlParams.get('p')); // base64 decode
 
 		document.getElementById('MessageText').innerHTML = decryptedDataParam;
@@ -36,12 +35,17 @@ function processPathParams() {
 
 function generateProcessedLink() {
 	let text = document.getElementById("textInput").value;
+
+	document.getElementById('urlAccess').style.display = "none";
+
 	if(text != undefined && text.length != 0) {
 		let encodedString = utoa(text);
 		let url = absolutePath + "?p=" + encodedString;
 		
+		setTimeout(() => {
 		document.getElementById('browsableLink').value = url;
-		document.getElementById('urlAccess').style.display = "block";
+		document.getElementById('urlAccess').style.display = "block"; 
+			}, 300);
 	}
 }
 

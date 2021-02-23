@@ -16,10 +16,6 @@
 					<a class="px-1 py-1 mt-2 text-sm sm:text-2xl hover:scale-125 font-bold focus:ring-2" href="/">
 						<img class="max-h-24" src="./assets/images/logo256_1.png" alt="logo" />
 					</a>
-					<div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
-						<p>Want to create your own card?</p>
-						<a href="/" class="text-cyan-600 hover:text-cyan-700"> Create your own &rarr; </a>
-					</div>
 				</div>
 			</div>
 		</header>
@@ -31,18 +27,24 @@
 					<div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-light-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
 					<div class="relative px-4 py-12 bg-white shadow-lg sm:rounded-3xl sm:p-20">
 						<div class="min-w-20 max-w-md mx-auto">
-							<!-- Display zone -->
-							<div id="dispMsg" class="text-base hidden leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
-								<p id='MessageText'>Nothing but crickets<br/>¯\_( ͡° ͜ʖ ͡°)_/¯</p>
+							<!-- Display message -->
+							<div id="dispMsg" class="hidden divide-y divide-gray-300">
+								<div class="text-base pb-6 leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+									<p id='MessageText'>Nothing but crickets<br/>¯\_( ͡° ͜ʖ ͡°)_/¯</p>
+								</div>
+								<div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+									<p>Want to create your own card?</p>
+									<a href="/" class="text-cyan-600 hover:text-cyan-700"> Create your own &rarr; </a>
+								</div>
 							</div>
 							<!-- Input zone -->
 							<div id="getMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
 								<div class="flex flex-col items-center">
-									<textarea id="textInput" name="msg" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none"></textarea>
+									<textarea id="textInput" name="msg" cols="25" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none"></textarea>
 								</div>
 								<div>
 									<button onclick="generateProcessedLink()" class="bg-light-blue-300 hover:bg-cyan-600 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left">Create card</button>
-									<p class="text-gray-400 py-1 font-bold float-right"><span id="inputCountStat">0</span> / 140</p>
+									<p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 140 </p>
 								</div>
 							</div>
 						</div>
