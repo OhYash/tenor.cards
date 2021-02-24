@@ -1,0 +1,28 @@
+tenor.cards:
+    Extremely easy to use message card generator. Allows everyone to share small ( < 140 ) text messages with friends and the internet.
+
+Mvc:
+    ✔ Logo @done (2/25/2021, 12:31:24 AM)
+    ✔ Card message display @done (2/25/2021, 12:31:27 AM)
+    ✔ Card input (, input limit, card button, display text stat) @done (2/25/2021, 12:31:28 AM)
+    ☐ Remove new lines during input
+    ☐ Collect usage analytics
+    ☐ Share to social buttons
+    ☐ Shimmer (getting a link)
+    ☐ Light animations
+    ☐ Webite dark mode
+    
+Bugs:
+    ☐ Crashes on emoji input. Handle
+
+To be tested:
+    ☐ test for non-english languages
+    ☐ Special characters
+
+Extensions:
+    ☐ More card styles
+    ☐ User info collection
+    ☐ Database
+    ☐ User logging
+    ☐ Card chains (like twitter thread)
+    ☐ Twitter thread unroll into tenor cards
