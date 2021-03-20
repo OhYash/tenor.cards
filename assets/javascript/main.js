@@ -1,8 +1,5 @@
 const absolutePath = 'https://tenor.cards/';
 
-// To encode, use this
-// btoa(encodeURIComponent(""))
-
 /**
  * ASCII to Unicode (decode Base64 to original data)
  * @param {string} b64
@@ -21,18 +18,27 @@ function utoa(data) {
 	return btoa(unescape(encodeURIComponent(data)));
 }
 
+/**
+ * Process the input parameter. i.e. Generate text from base64 to ASCII and display.
+ */
 function processPathParams() {
 	var urlParams = new URLSearchParams(location.search);
 	if (urlParams.has('p'))
 	{
 		document.getElementById('dispMsg').style.display = "block";
-		document.getElementById('getMsg').style.display = "none";
+		document.getElementById('createCardOption').style.display = "block";
+		document.getElementById('inputMsg').style.display = "none";
+		
 		let decryptedDataParam = atou(urlParams.get('p')); // base64 decode
-
-		document.getElementById('MessageText').innerHTML = decryptedDataParam;
+		let messageTextElement = document.getElementById('MessageText');
+		messageTextElement.innerHTML = decryptedDataParam;
+		//messageTextElement.removeChild(messageTextElement.firstChild);
 	}
 }
 
+/**
+ * Generate the processed link for the input text converted to Base64 
+ */
 function generateProcessedLink() {
 	let text = document.getElementById("textInput").value;
 
@@ -49,6 +55,9 @@ function generateProcessedLink() {
 	}
 }
 
+/**
+ * Utitlity method to select and copy text from box to system clipboard
+ */
 function copyToClipboard() {
 	var copyText = document.getElementById("browsableLink");
 
@@ -58,10 +67,14 @@ function copyToClipboard() {
 	document.execCommand("copy");
 }
 
+/**
+ * Count and display input text as the use inputs data on the fly
+ */
 function dispTextCount() {
 	let text = document.getElementById("textInput").value;
 	let textLength = text.length;
 	//if (length === 140)
 		// set color of 'inputCountStat' object to light red  	
+		// Also, revert back to original color if not present
 	document.getElementById("inputCountStat").innerHTML = textLength;
 }

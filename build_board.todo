@@ -7,17 +7,21 @@ Mvc:
     ✔ Card input (, input limit, card button, display text stat) @done (2/25/2021, 12:31:28 AM)
     ☐ Remove new lines during input
     ☐ Collect usage analytics
+    ✔ User warning when script is disabled. @done (3/20/2021, 4:56:15 PM)
     ☐ Share to social buttons
     ☐ Shimmer (getting a link)
     ☐ Light animations
     ☐ Webite dark mode
     
 Bugs:
-    ☐ Crashes on emoji input. Handle
+    ✔ Update the default text. @done (3/20/2021, 4:56:25 PM)
+    ✔ Crashes on emoji input. Handle @done (3/20/2021, 4:56:35 PM)
 
 To be tested:
     ☐ test for non-english languages
-    ☐ Special characters
+        > Tested for Hindi. Supports short text bits. Ideally unusable beyond a few words.
+    ✔ Special characters @done (3/20/2021, 2:48:58 PM)
+        > Crashes on emojis. Bug logged.
 
 Extensions:
     ☐ More card styles
