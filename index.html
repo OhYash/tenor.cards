@@ -1,82 +1,91 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tenor Cards</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenor Cards</title>
 
-		<link href="./assets/css/output.css" rel="stylesheet" />
-		<script type="text/javascript" src="./assets/javascript/main.js"></script>
-	</head>
-	<body class="text-gray-600 font-body" onload="processPathParams()">
-		<!-- Top panel -->
-		<header>
-			<div class="w-full lg:fixed shadow-sm">
-				<div class="flex flex-col w-full px-4 mx-auto border-gray-2 items-center sm:justify-between sm:flex-row md:px-6 lg:px-20">
-					<a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 transform hover:scale-110" href="/">
-						<img class="max-h-20" src="./assets/images/logo256_1.png" alt="logo" />
-					</a>
-					<!--a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 text-gray-600 hover:text-gray-700" href="/">
-						About
-					</a-->
-					<a id="createCardOption" class="hidden px-1 py-1 mt-2 mb-2 text-xl sm:text-xl font-bold focus:ring-2 text-cyan-600 hover:text-cyan-700" href="/">
-						Create your own card &rarr; 
-					</a>
-				</div>
-			</div>
-		</header>
+  <link href="./assets/css/output.css" rel="stylesheet" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <script type="text/javascript" src="./assets/javascript/main.js"></script>
+</head>
+<body class="text-gray-600 font-body bg-gray-50" onload="processPathParams()">
+  <!-- Top panel -->
+  <header>
+     <div class="w-full bg-gradient-to-r from-green-600 to-gray-700 lg:fixed shadow-neumorphic">
+        <div class="flex flex-col w-full px-4 mx-auto border-gray-2 items-center sm:justify-between sm:flex-row md:px-6 lg:px-20">
+           <a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 transform hover:scale-110" href="/">
+              <img class="max-h-20" src="./assets/images/logo256_1.png" alt="logo" />
+          </a>
+          <div class="flex flex-row">
+           <a class="px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200" href="https://cutt.ly/nvvQjrX">
+              About
+          </a>
+          <span class="px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-gray-400">&nbsp;&nbsp;</span>
+          <a id="createCardOption" class="hidden px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200" href="/">
+              Create your own card &rarr; 
+          </a>
+      </div>
+  </div>
+</div>
+</header>
 
-		<!-- Body -->
-		<main>
-			<div class="py-24 flex flex-col justify-center sm:py-12 lg:min-h-screen">
-				<div class="relative py-3 sm:max-w-xl sm:mx-auto">
-					<!--div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-light-blue-300 shadow-neumorphic transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div-->
-					<div class="relative px-4 py-12 bg-white shadow-neumorphic sm:rounded-2xl sm:p-20">
-						<div class="min-w-20 max-w-md mx-auto">
-							<!-- Display message -->
-							<div id="dispMsg" class="hidden divide-y divide-gray-300">
-								<div class="text-base pb-4 text-gray-700 sm:text-xl sm:leading-7">
-									<p id='MessageText'>Could not load the text. Either of these could be the possible reasons:
-										<br /><br />
-										&nbsp;&nbsp;•&nbsp; URL is broken<br />
-										&nbsp;&nbsp;•&nbsp; javascript is disabled<br />
-										&nbsp;&nbsp;•&nbsp; The sender added some unsupported text<br />
-									</p>
-								</div>
-								<div id="websiteBranding" class="hidden text-base leading-6 space-y-4 leading-6 font-bold text-gray-400 sm:text-lg sm:leading-7">
-									<p>Powered by <span class="text-cyan-600">tenor.cards</span><p>
-								</div>
-							</div>
-							<!-- Input zone -->
-							<div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
-								<div class="flex flex-col items-center">
-									<textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none"></textarea>
-								</div>
-								<div>
-									<button onclick="generateProcessedLink()" class="bg-light-blue-300 hover:bg-cyan-600 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left">Create card</button>
-									<p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 140 </p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flex justify-center">
-					<div id="urlAccess" class="relative hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
-						<input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l">
-						<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy link</button>
-					</div>
-				</div>	
-			</div>
-		</main>
+<!-- Body -->
+<main>
+ <div class="py-24 flex flex-col justify-center sm:py-12 lg:min-h-screen">
+    <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+       <!--div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-light-blue-300 shadow-neumorphic transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div-->
+       <div class="relative px-4 py-12 font-sans bg-white shadow-neumorphic sm:rounded-2xl sm:p-20">
+          <div class="min-w-20 max-w-md mx-auto">
+             <!-- Display message -->
+             <div id="dispMsg" class="hidden divide-y divide-gray-300">
+                <div class="text-base pb-4 text-gray-700 sm:text-xl sm:leading-7">
+                   <p id='MessageText'>Could not load the text. Either of these could be the possible reasons:
+                      <br /><br />
+                      &nbsp;&nbsp;•&nbsp; URL is broken<br />
+                      &nbsp;&nbsp;•&nbsp; javascript is disabled<br />
+                      &nbsp;&nbsp;•&nbsp; The sender added some unsupported text<br />
+                  </p>
+              </div>
+              <div id="websiteBranding" class="hidden text-base leading-6 space-y-4 leading-6 font-bold text-gray-400 sm:text-lg sm:leading-7">
+               <p>Powered by <span class="text-cyan-600">tenor.cards</span><p>
+               </div>
+           </div>
+           <!-- Input zone -->
+           <div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+            <div class="flex flex-col items-center">
+               <textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none"></textarea>
+           </div>
+           <div>
+               <button onclick="generateProcessedLink()" class="bg-light-blue-300 hover:bg-cyan-600 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left">Create card</button>
+               <p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 140 </p>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<div class="flex justify-center">
+   <div id="urlAccess" class="relative hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
+      <input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l">
+      <button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy link</button>
+  </div>
+</div>	
+</div>
+</main>
 
-		<!-- Bottom panel -->
-		<footer>
-			<div class="bottom-0 w-full lg:fixed">
-				<div class="flex flex-col w-full px-4 mx-auto border-gray-2 sm:justify-between sm:flex-row md:px-6 lg:px-20">
-					<p class="px-4 py-2 mt-2 text-gray-500 italic text-sm sm:text-base"></p>
-					<p class="px-4 py-2 mt-2 text-gray-500 italic text-sm sm:text-base">Crafted by <a class="text-yellow-700 hover:underline focus:ring-2" href="https://ohyash.github.io">OhYash</a></p>
-				</div>
-			</div>
-		</footer>
-	</body>
+<!-- Bottom panel -->
+<footer>
+ <div class="bottom-0 bg-gray-100 w-full lg:fixed">
+    <div class="flex flex-col w-full px-4 mx-auto border-gray-2 sm:justify-between sm:flex-row md:px-6 lg:px-20">
+       <p class="px-4 py-2 mt-2 text-gray-500 text-sm sm:text-base"><a class="hover:underline text-cyan-600 focus:ring-2" href="https://github.com/OhYash/tenor.cards">Github</a> • <a class="hover:underline text-cyan-600 focus:ring-2" href="https://instagram.com/tenor.cards?igshid=c9ebk1adrta4">Instagram</a> • <a class="hover:underline text-cyan-600 focus:ring-2" href="https://twitter.com/Ohy4sh">Twitter</a></p>
+       <p class="px-4 py-2 mt-2 text-gray-500 italic text-sm sm:text-base">Crafted by <a class="text-yellow-700 hover:underline focus:ring-2" href="https://ohyash.github.io/?utm_source=tenorcards&utm_medium=footer&utm_campaign=craft">OhYash</a></p>
+   </div>
+</div>
+</footer>
+<script data-goatcounter="https://ohyash.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
 </html>

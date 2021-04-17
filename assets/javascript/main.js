@@ -6,7 +6,7 @@ const absolutePath = 'https://tenor.cards/';
  * @return {string}
  */
 function atou(b64) {
-	return decodeURIComponent(escape(atob(b64)));
+	return decodeURIComponent(atob(b64));
 }
 
 /**
@@ -15,7 +15,7 @@ function atou(b64) {
  * @return {string}
  */
 function utoa(data) {
-	return btoa(unescape(encodeURIComponent(data)));
+	return btoa(encodeURIComponent(data));
 }
 
 /**
