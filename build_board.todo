@@ -1,14 +1,15 @@
 tenor.cards:
     Extremely easy to use message card generator. Allows everyone to share small ( < 140 ) text messages with friends and the internet.
 
-
+    Build tailwindcss:
+        $ npx tailwindcss build assets/css/main.css -o assets/css/output.css
 
 Mvc:
     ✔ Logo @done (2/25/2021, 12:31:24 AM)
     ✔ Card message display @done (2/25/2021, 12:31:27 AM)
     ✔ Card input (, input limit, card button, display text stat) @done (2/25/2021, 12:31:28 AM)
     ☐ Remove new lines during input
-    ☐ Collect usage analytics
+    ✔ Collect usage analytics @done (21-04-25 15:02)
     ✔ User warning when script is disabled. @done (3/20/2021, 4:56:15 PM)
     ☐ Share to social buttons
     ☐ Shimmer (getting a link)
@@ -27,6 +28,8 @@ To be tested:
 
 Extensions:
     ☐ More card styles
+    ✔ Square card for instagram style @done (21-04-25 17:55)
+    ☐ HTML Canvas show for square card
     ☐ User info collection
     ☐ Database
     ☐ User logging

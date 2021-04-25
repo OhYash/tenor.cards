@@ -1,9 +1,9 @@
-<!doctype html>
-<html>
-<head>
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tenor Cards</title>
+  <TITLE>Tenor Cards</TITLE>
 
   <link href="./assets/css/output.css" rel="stylesheet" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -11,8 +11,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <script type="text/javascript" src="./assets/javascript/main.js"></script>
-</head>
-<body class="text-gray-600 font-body bg-gray-50" onload="processPathParams()">
+</HEAD>
+<BODY class="text-gray-600 font-body bg-gray-50" onload="processPathParams()">
   <!-- Top panel -->
   <header>
      <div class="w-full bg-gradient-to-r from-green-600 to-gray-700 lg:fixed shadow-neumorphic">
@@ -50,14 +50,12 @@
                       &nbsp;&nbsp;•&nbsp; The sender added some unsupported text<br />
                   </p>
               </div>
-              <div id="websiteBranding" class="hidden text-base leading-6 space-y-4 leading-6 font-bold text-gray-400 sm:text-lg sm:leading-7">
-               <p>Powered by <span class="text-cyan-600">tenor.cards</span><p>
-               </div>
-           </div>
-           <!-- Input zone -->
-           <div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+          </div>
+          <!-- Input zone -->
+          <div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
             <div class="flex flex-col items-center">
-               <textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none"></textarea>
+               <textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" 
+               class="overflow-hidden border-none resize-none outline-none"></textarea>
            </div>
            <div>
                <button onclick="generateProcessedLink()" class="bg-light-blue-300 hover:bg-cyan-600 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left">Create card</button>
@@ -86,6 +84,6 @@
 </div>
 </footer>
 <script data-goatcounter="https://ohyash.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-</body>
-</html>
+async src="//gc.zgo.at/count.js"></script>
+</BODY>
+</HTML>

@@ -1,4 +1,5 @@
 const absolutePath = 'https://tenor.cards/';
+const squareViewPath = 'https://tenor.cards/views/skew.html';
 
 /**
  * ASCII to Unicode (decode Base64 to original data)
@@ -21,18 +22,26 @@ function utoa(data) {
 /**
  * Process the input parameter. i.e. Generate text from base64 to ASCII and display.
  */
-function processPathParams() {
+function processPathParams(isCustomPage = false) {
 	var urlParams = new URLSearchParams(location.search);
 	if (urlParams.has('p'))
 	{
-		document.getElementById('dispMsg').style.display = "block";
-		document.getElementById('createCardOption').style.display = "block";
-		document.getElementById('inputMsg').style.display = "none";
+		if (!isCustomPage)
+		{
+			document.getElementById('dispMsg').style.display = "block";
+			document.getElementById('createCardOption').style.display = "block";
+			document.getElementById('inputMsg').style.display = "none";
+		}
 		
 		let decryptedDataParam = atou(urlParams.get('p')); // base64 decode
 		let messageTextElement = document.getElementById('MessageText');
 		messageTextElement.innerHTML = decryptedDataParam;
-		//messageTextElement.removeChild(messageTextElement.firstChild);
+	}
+	if (urlParams.has('bg'))
+	{
+		bgColor = urlParams.get('bg')
+		document.body.style.backgroundColor = bgColor;
+		document.getElementById('cardOuter').style.boxShadow = `11px 11px 22px ${bgColor}, -11px -11px 22px ${bgColor}`
 	}
 }
 
@@ -45,13 +54,13 @@ function generateProcessedLink() {
 	document.getElementById('urlAccess').style.display = "none";
 
 	if(text != undefined && text.length != 0) {
-		let encodedString = utoa(text);
+		let encodedString = utoa(text).replaceAll("[^\\p{L}\\p{N}\\p{P}\\p{Z}]", "");
 		let url = absolutePath + "?p=" + encodedString;
 		
 		setTimeout(() => {
-		document.getElementById('browsableLink').value = url;
-		document.getElementById('urlAccess').style.display = "block"; 
-			}, 300);
+			document.getElementById('browsableLink').value = url;
+			document.getElementById('urlAccess').style.display = "block"; 
+		}, 300);
 	}
 }
 

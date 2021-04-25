@@ -695,6 +695,11 @@ video {
   max-width: 28rem;
 }
 
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -755,6 +760,10 @@ video {
 
 .bottom-0 {
   bottom: 0px;
+}
+
+.resize-none {
+  resize: none;
 }
 
 * {
@@ -944,11 +953,6 @@ video {
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .sm\:text-xl {
