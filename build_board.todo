@@ -8,7 +8,7 @@ Mvc:
     ✔ Logo @done (2/25/2021, 12:31:24 AM)
     ✔ Card message display @done (2/25/2021, 12:31:27 AM)
     ✔ Card input (, input limit, card button, display text stat) @done (2/25/2021, 12:31:28 AM)
-    ☐ Remove new lines during input
+    ☐ Remove new lines during input or add newline(\n) support.
     ✔ Collect usage analytics @done (21-04-25 15:02)
     ✔ User warning when script is disabled. @done (3/20/2021, 4:56:15 PM)
     ☐ Share to social buttons
@@ -16,7 +16,6 @@ Mvc:
     ☐ Light animations
     ☐ Webite dark mode
     ☐ Text formatting with *bold*, _italics_, and -strikethough-
-    ☐ Newline(\n) support.
     
 Bugs:
     ✔ Update the default text. @done (3/20/2021, 4:56:25 PM)
