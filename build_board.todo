@@ -15,10 +15,13 @@ Mvc:
     ☐ Shimmer (getting a link)
     ☐ Light animations
     ☐ Webite dark mode
+    ☐ Text formatting with *bold*, _italics_, and -strikethough-
+    ☐ Newline(\n) support.
     
 Bugs:
     ✔ Update the default text. @done (3/20/2021, 4:56:25 PM)
     ☐ Crashes on emoji input. Handle
+    ☐ Crashes on tilde(~) input. Handle.
 
 To be tested:
     ☐ test for non-english languages
@@ -28,6 +31,7 @@ To be tested:
 
 Extensions:
     ☐ More card styles
+    ☐ Text on the right side for quotes.
     ✔ Square card for instagram style @done (21-04-25 17:55)
     ☐ HTML Canvas show for square card
     ☐ User info collection
