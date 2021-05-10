@@ -37,4 +37,5 @@ Extensions:
     ☐ Database
     ☐ User logging
     ☐ Card chains (like twitter thread)
-    ☐ Twitter thread unroll into tenor cards
+    ☐ Twitter thread unroll bot into tenor cards
+    ☐ Instagram thread unroll bot into tenor cards (requires image support)
