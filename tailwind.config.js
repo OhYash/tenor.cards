@@ -4,7 +4,9 @@ module.exports = {
   purge: {
     enabled: true,
     content: [
-      './index.html'
+      './index.html',
+      './views/*.html',
+      './assets/javascript/main.js'
     ]
   },
   darkMode: false, // or 'media' or 'class'
