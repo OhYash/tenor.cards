@@ -7,16 +7,23 @@ function pageLoadMain() {
 	if (!urlParams)
 		urlParams = new URLSearchParams(location.search);
 
-	// Show "Create Card" option on msg view page
-	if (urlParams.has('p')) // Message view
-		document.getElementById('CreateCardOption').style.display = "block";
-
 	// hide the dropdown, set card html, set params, call the iframe
 	if (urlParams.has('ct')) // Card Type
 	{
 		document.getElementById("CardSelector").value = urlParams.get('ct');
-		document.getElementById('CardSelector').style.display = "none";
+		document.getElementById("CardSelectorForm").style.display = "none";
 
+		loadCard();
+	}
+	else
+	{
+		document.getElementById("CardSelectorForm").style.display = "block";
+	}
+
+	// Show "Create Card" option on msg view page
+	if (urlParams.has('p')) // Message view
+	{
+		document.getElementById('CreateCardOption').style.display = "block";
 		loadCard();
 	}
 }
@@ -42,4 +49,3 @@ function loadCard() {
 	let cpath = cttofilename(cname);
 	document.getElementById('MainCard').src = cpath;
 }
-

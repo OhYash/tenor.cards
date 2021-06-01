@@ -1,61 +1,69 @@
 <!DOCTYPE HTML>
 <HTML>
-<HEAD>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <TITLE>Tenor Cards</TITLE>
+	<HEAD>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<TITLE>Tenor Cards</TITLE>
 
- <link href="./assets/css/main.css" rel="stylesheet" />
- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
- <link rel="manifest" href="/site.webmanifest">
- <script type="text/javascript" src="./assets/javascript/main.js"></script>
- <noscript>This website requires javascript to work. It seems to have been disabled. Please enable javascript or use a different browser!</noscript>
-</HEAD>
-<BODY class="text-gray-600 font-body bg-gray-50" onload="pageLoadMain()">
- <!-- Top panel -->
- <header>
-    <div class="w-full bg-gradient-to-r from-green-600 to-gray-700 lg:fixed shadow-neumorphic">
-       <div class="flex flex-col w-full px-4 mx-auto border-gray-2 items-center sm:justify-between sm:flex-row md:px-6 lg:px-20">
-          <a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 transform hover:scale-110" href="/">
-             <img class="max-h-20" src="./assets/images/logo256_1.png" alt="logo" />
-          </a>
-          <div class="flex flex-row">
-             <a class="px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="https://tenor.cards/?p=VGVub3JjYXJkcyBpcyBhIHdlYnNpdGUgb2YgLi4uY2FyZHMuIENhcmRzIHRoYXQgc3BpY2UgdXAgeW91ciBzaG9ydCB0ZXh0cy4gSnVzdCB3cml0ZSB0ZXh0LCBjcmVhdGUgbGluayBhbmQgc2hhcmUgd2l0aCBmcmllbmRzLiBZZXAsIHRoYXQgaXMgaXQuIFJlYWxseSE=">
-                About
-             </a>
-             <span class="px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-gray-400">&nbsp;&nbsp;</span>
-             <a id="CreateCardOption" class="hidden px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="/">
-                Create your own card &rarr; 
-             </a>
-          </div>
-       </div>
-    </div>
- </header>
+		<link href="./assets/css/main.css" rel="stylesheet" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<script type="text/javascript" src="./assets/javascript/main.js"></script>
+		<noscript>This website requires javascript to work. It seems to have been disabled. Please enable javascript or use a different browser!</noscript>
+	</HEAD>
+	<BODY class="flex flex-col h-screen bg-gray-50" onload="pageLoadMain()">
+		<!-- Top panel -->
+		<header class="flex-none">
+			<div class="w-full bg-gradient-to-r from-green-600 to-gray-700 shadow-neumorphic fixed">
+				<div class="flex flex-col w-full px-4 mx-auto border-gray-2 items-center sm:justify-between sm:flex-row md:px-6 lg:px-20">
+					<a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 transform hover:scale-110" href="/">
+						<img class="max-h-20" src="./assets/images/logo256_1.png" alt="logo" />
+					</a>
+					<form id="CardSelectorForm" class="relative hidden sm:block">
+						<label>
+							<span class="sr-only">Select card design</span>
+							<select id="CardSelector" class="appearance-none block bg-transparent pr-7 py-1 text-gray-100 font-bold text-md focus:outline-none focus:text-white transition-colors duration-200" onchange="loadCard()">
+								<option value="simple">White</option>
+								<option value="skew">Skew</option>
+								<option value="quote">Quote</option>
+							</select>
+						</label>
+						<svg class="w-5 h-5 text-gray-100 absolute top-1/2 right-0 -mt-2 pointer-events-none" fill="currentColor">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
+						</svg>
+					</form>
+					<div class="flex flex-row">
+						<a class="p-1 my-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="https://tenor.cards/?p=VGVub3JjYXJkcyBpcyBhIHdlYnNpdGUgb2YgLi4uY2FyZHMuIENhcmRzIHRoYXQgc3BpY2UgdXAgeW91ciBzaG9ydCB0ZXh0cy4gSnVzdCB3cml0ZSB0ZXh0LCBjcmVhdGUgbGluayBhbmQgc2hhcmUgd2l0aCBmcmllbmRzLiBZZXAsIHRoYXQgaXMgaXQuIFJlYWxseSE=">
+							About
+						</a>
+						<span class="p-1 my-2 text-xl font-bold focus:ring-2 text-gray-400">&nbsp;&nbsp;</span>
+						<a id="CreateCardOption" class="hidden px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="/">
+							Create your own card &rarr; 
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
 
- <!-- Body -->
-   <main>
-      <div class="w-full h-screen pt-24 pb-12">
-         <select class="sm:ml-24 md:ml-60" id="CardSelector" onchange="loadCard()">
-           <option value="simple">White</option>
-           <option value="skew">Skew</option>
-           <option value="quote">Quote</option>
-         </select>
-         <iframe id="MainCard" class="w-full h-full" src="./cards/simple_create.html" title="skewcard"></iframe> 
-      </div>
-   </main>
+		<!-- Body -->
+		<main class="flex-auto">
+			<div class="pt-24 pb-12 flex-grow w-full h-full">
+				<iframe id="MainCard" class="flex-grow w-full h-full" src="./cards/simple_create.html" title="skewcard"></iframe>
+			</div>
+		</main>
 
-<!-- Bottom panel -->
-<footer>
-  <div class="bottom-0 bg-gray-100 w-full lg:fixed">
-     <div class="flex flex-col w-full px-4 mx-auto border-gray-2 sm:justify-between sm:flex-row md:px-6 lg:px-20">
-        <p class="px-4 py-2 mt-2 text-gray-500 text-sm sm:text-base"><a class="hover:underline text-cyan-600 focus:ring-2" href="https://github.com/OhYash/tenor.cards">Github</a> • <a class="hover:underline text-cyan-600 focus:ring-2" href="https://instagram.com/tenor.cards?igshid=c9ebk1adrta4">Instagram</a> • <a class="hover:underline text-cyan-600 focus:ring-2" href="https://twitter.com/Ohy4sh">Twitter</a></p>
-        <p class="px-4 py-2 mt-2 text-gray-500 italic text-sm sm:text-base">Crafted by <a class="text-yellow-700 hover:underline focus:ring-2" href="https://ohyash.github.io/?utm_source=tenorcards&utm_medium=footer&utm_campaign=craft">OhYash</a></p>
-     </div>
-  </div>
-</footer>
-<script data-goatcounter="https://ohyash.goatcounter.com/count"
-   async src="//gc.zgo.at/count.js"></script>
-</BODY>
+		<!-- Bottom panel -->
+		<footer class="flex-none">
+			<div class="bottom-0 bg-gray-100 w-full fixed">
+				<div class="flex flex-col w-full px-4 mx-auto border-gray-2 sm:justify-between sm:flex-row md:px-6 lg:px-20">
+					<p class="px-4 py-2 mt-2 text-gray-500 text-sm sm:text-base"><a class="hover:underline text-cyan-600 focus:ring-2" href="https://github.com/OhYash/tenor.cards">Github</a> • <a class="hover:underline text-cyan-600 focus:ring-2" href="https://instagram.com/tenor.cards?igshid=c9ebk1adrta4">Instagram</a> • <a class="hover:underline text-cyan-600 focus:ring-2" href="https://twitter.com/Ohy4sh">Twitter</a></p>
+					<p class="px-4 py-2 mt-2 text-gray-500 italic text-sm sm:text-base">Crafted by <a class="text-yellow-700 hover:underline focus:ring-2" href="https://ohyash.github.io/?utm_source=tenorcards&utm_medium=footer&utm_campaign=craft">OhYash</a></p>
+				</div>
+			</div>
+		</footer>
+		<script data-goatcounter="https://ohyash.goatcounter.com/count"
+				async src="//gc.zgo.at/count.js"></script>
+	</BODY>
 </HTML>
