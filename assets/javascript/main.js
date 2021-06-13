@@ -1,6 +1,3 @@
-const absolutePath = 'https://tenor.cards/';
-const squareViewPath = 'https://tenor.cards/views/skew.html';
-
 var urlParams;
 
 function pageLoadMain() {

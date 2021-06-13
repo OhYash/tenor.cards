@@ -1,14 +1,4 @@
 const absolutePath = 'https://tenor.cards/';
-const squareViewPath = 'https://tenor.cards/views/skew.html';
-
-/**
- * ASCII to Unicode (decode Base64 to original data)
- * @param {string} b64
- * @return {string}
- */
-function atou(b64) {
-	return decodeURIComponent(atob(b64));
-}
 
 /**
  * Unicode to ASCII (encode data to Base64)
@@ -17,32 +7,6 @@ function atou(b64) {
  */
 function utoa(data) {
 	return btoa(encodeURIComponent(data));
-}
-
-/**
- * Process the input parameter. i.e. Generate text from base64 to ASCII and display.
- */
-function processPathParams(isCustomPage = false) {
-	var urlParams = new URLSearchParams(location.search);
-
-	if (urlParams.has('p'))
-	{
-		if (!isCustomPage)
-		{
-			document.getElementById('dispMsg').style.display = "block";
-			document.getElementById('createCardOption').style.display = "block";
-			document.getElementById('inputMsg').style.display = "none";
-		}
-		
-		let decryptedDataParam = atou(urlParams.get('p')); // base64 decode
-		let messageTextElement = document.getElementById('MessageText');
-		messageTextElement.innerHTML = decryptedDataParam;
-	}
-	if (urlParams.has('bg'))
-	{
-		bgColor = urlParams.get('bg')
-		document.body.style.backgroundColor = bgColor;
-	}
 }
 
 /**
@@ -60,7 +24,7 @@ function generateProcessedLink() {
 		setTimeout(() => {
 			document.getElementById('browsableLink').value = url;
 			document.getElementById('urlAccess').style.display = "block"; 
-		}, 300);
+		}, 320);
 	}
 }
 

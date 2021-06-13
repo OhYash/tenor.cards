@@ -6,11 +6,7 @@
 		<title>Tenor Cards</title>
 
 		<link href="./../assets/css/main.css" rel="stylesheet" />
-		<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-		<link rel="manifest" href="../site.webmanifest">
-		<script type="text/javascript" src="./../assets/javascript/card.js"></script>
+		<script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
 	</HEAD>
 	<BODY onload="processPathParams(true)">
 		<div class="pt-8 flex flex-col justify-center h-screen">
@@ -21,8 +17,7 @@
 						<!-- Input message -->
 						<div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
 							<div class="flex flex-col items-center">
-								<textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" 
-																																			   class="overflow-hidden border-none resize-none outline-none"></textarea>
+								<textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
 							</div>
 							<div>
 								<button onclick="generateProcessedLink()" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left hover:bg-cyan-700 hover:text-white">Create card</button>

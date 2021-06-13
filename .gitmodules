@@ -1,0 +1,3 @@
+[submodule "assets/javascript/parsemsg-js"]
+	path = assets/javascript/parsemsg-js
+	url = https://github.com/OhYash/parsemsg-js.git
