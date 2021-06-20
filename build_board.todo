@@ -18,7 +18,7 @@ Mvc:
         ☐ Shimmer (getting a link)
     Remove new lines during input or add newline(\n) support:
         ✔ Add new line support @done (21-06-14 00:33)
-        ☐ Cleanup newline chars on create.
+        ✘ Cleanup newline chars on create. @cancelled (21-06-21 02:18)
     Text formatting with *bold*, _italics_, and -strikethough-; New line with double-space:
         ✔ Add parsemsg-js as a submodule and include in every [_view] card @done (21-06-14 00:32)
         ☐ Add toast or info button with information about formatting in every [_create] card.
@@ -47,6 +47,7 @@ Extensions:
         ☐ Knowledge•Day
         ☐ TSS
         ☐ Saaf Saans
+    ☐ Light up the text limit bar when user tries to enter > char limit. Something like how terminology lights up when pressing illegal key.
     ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode. Need to explore)?)
     ☐ Text on the right side for quotes. (Will be covered as a part of Quote card).
     ☐ HTML Canvas show for square card

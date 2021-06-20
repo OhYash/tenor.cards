@@ -6,7 +6,7 @@ const absolutePath = 'https://tenor.cards/';
  * @return {string}
  */
 function utoa(data) {
-	return btoa(encodeURIComponent(data.replaceAll("[^\\p{L}\\p{N}\\p{P}\\p{Z}]", "")));
+	return btoa(encodeURIComponent(data));
 }
 
 /**
@@ -18,8 +18,9 @@ function generateProcessedLink(cardName = null) {
 
 	document.getElementById('urlAccess').style.display = "none";
 
-	if(text != undefined && text.length != 0) {
-		let encodedString = utoa(text);
+	if(text && text.length != 0) {
+		let filteredText = text.replaceAll("[^\\p{L}\\p{N}\\p{P}\\p{Z}]", "");
+		let encodedString = utoa(filteredText);
 		let url = absolutePath + "?p=" + encodedString;
 		
 		if (cardName && cardName.length != 0)
@@ -28,7 +29,7 @@ function generateProcessedLink(cardName = null) {
 		setTimeout(() => {
 			document.getElementById('browsableLink').value = url;
 			document.getElementById('urlAccess').style.display = "block"; 
-		}, 320);
+		}, 420);
 	}
 }
 
@@ -50,8 +51,5 @@ function copyToClipboard() {
 function dispTextCount() {
 	let text = document.getElementById("textInput").value;
 	let textLength = text.length;
-	//if (length === 140)
-		// animate and glow 'inputCountStat' object
-		// Also, revert back to original color if not present
 	document.getElementById("inputCountStat").innerHTML = textLength;
 }
