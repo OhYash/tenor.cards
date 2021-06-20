@@ -8,7 +8,7 @@
 		<link href="./../assets/css/main.css" rel="stylesheet" />
 		<script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
 	</HEAD>
-	<BODY onload="processPathParams(true)">
+	<BODY>
 		<div class="pt-8 flex flex-col justify-center h-screen">
 			<div class="relative sm:max-w-xl sm:mx-auto">
 				<div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-light-blue-300 shadow-neumorphic transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -20,7 +20,7 @@
 								<textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
 							</div>
 							<div>
-								<button onclick="generateProcessedLink()" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left hover:bg-cyan-700 hover:text-white">Create card</button>
+								<button onclick="generateProcessedLink('skew')" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left hover:bg-cyan-700 hover:text-white">Create card</button>
 								<p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 140 </p>
 							</div>
 						</div>

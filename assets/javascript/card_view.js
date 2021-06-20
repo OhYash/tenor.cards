@@ -9,24 +9,22 @@ function atou(b64) {
 }
 
 /**
- * Process the input parameter. i.e. Generate text from base64 to ASCII and display.
+ * Main processor for the input parameters. i.e. Generate text from base64 to ASCII, apply formatting, and display.
+ * @param {function callback} customFunc
  */
-function processPathParams(isCustomPage = false) {
+function processPathParams(customFunc = null) {
     var urlParams = new URLSearchParams(location.search);
 
     if (urlParams.has('p'))
     {
-        if (!isCustomPage)
-        {
-            document.getElementById('dispMsg').style.display = "block";
-            document.getElementById('createCardOption').style.display = "block";
-            document.getElementById('inputMsg').style.display = "none";
-        }
-        
         let decryptedDataParam = atou(urlParams.get('p')); // base64 decode
         let parsedMessage = parseTenorCardsMessage(decryptedDataParam);
-        let messageTextElement = document.getElementById('MessageText');
-        messageTextElement.innerHTML = parsedMessage;
+        document.getElementById('MessageText').innerHTML = parsedMessage;
+
+        if (customFunc)
+            customFunc(urlParams);
+
+        parent.document.getElementById('createCardOption').style.display = "block";
     }
     if (urlParams.has('bg'))
     {

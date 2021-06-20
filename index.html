@@ -21,10 +21,10 @@
 					<a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 transform hover:scale-110" href="/">
 						<img class="max-h-20" src="./assets/images/logo256_1.png" alt="logo" />
 					</a>
-					<form id="CardSelectorForm" class="relative hidden sm:block">
+					<form id="CardSelectorForm" class="relative sm:block">
 						<label>
-							<span class="sr-only">Select card design</span>
-							<select id="CardSelector" class="appearance-none block bg-transparent pr-7 py-1 text-gray-100 font-bold text-md focus:outline-none focus:text-white transition-colors duration-200" onchange="loadCard()">
+							<span class="sr-only">Select card type</span>
+							<select id="CardSelector" title="Card type" class="appearance-none block bg-transparent pr-7 py-1 text-gray-100 font-bold text-md focus:outline-none focus:text-white transition-colors duration-200" onchange="loadCard()">
 								<option value="simple">Neumorphic white</option>
 								<option value="skew">Skew</option>
 								<option value="quote">Quote</option>
@@ -35,12 +35,12 @@
 						</svg>
 					</form>
 					<div class="flex flex-row">
-						<a class="p-1 my-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="https://tenor.cards/?p=VGVub3JjYXJkcyBpcyBhIHdlYnNpdGUgb2YgLi4uY2FyZHMuIENhcmRzIHRoYXQgc3BpY2UgdXAgeW91ciBzaG9ydCB0ZXh0cy4gSnVzdCB3cml0ZSB0ZXh0LCBjcmVhdGUgbGluayBhbmQgc2hhcmUgd2l0aCBmcmllbmRzLiBZZXAsIHRoYXQgaXMgaXQuIFJlYWxseSE=">
+						<a class="p-1 my-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="https://tenor.cards/?p=KlNwZWNpYWwqIG1lc3NhZ2VzIHNob3VsZG4ndCBiZSBib3JpbmcuICBTdG9wIHNlbmRpbmcgYm9yaW5nIG1lc3NhZ2VzLCBzdG9wIGhhdmluZyBhIGJvcmluZyBsaWZlLiBVc2Ugb25lIG9mIHRoZSBkZXNpZ24gY2FyZHMgZnJvbSB0b3AgYW5kIHNwaWNlIHVwIHlvdXIgd29yZHMuISE=">
 							About
 						</a>
 						<span class="p-1 my-2 text-xl font-bold focus:ring-2 text-gray-400">&nbsp;&nbsp;</span>
 						<a id="CreateCardOption" class="hidden px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="/">
-							Create your own card &rarr; 
+							Create your own card &rarr;
 						</a>
 					</div>
 				</div>

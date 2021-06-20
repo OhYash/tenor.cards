@@ -8,18 +8,18 @@
 		<link href="./../assets/css/main.css" rel="stylesheet" />
 		<script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
 	</HEAD>
-	<BODY onload="processPathParams(true)">
+	<BODY>
 		<div class="pt-8 flex flex-col justify-center h-screen">
 			<div class="sm:max-w-xl sm:mx-auto">
-				<div class="px-4 font-sans bg-white shadow-neumorphic sm:rounded-2xl sm:p-20">
+				<div class="px-4 py-12 font-sans bg-white shadow-neumorphic sm:rounded-2xl sm:p-20">
 					<div class="min-w-20 max-w-md mx-auto">
 						<!-- Input message -->
 						<div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
-							<div>
+							<div class="flex flex-col items-center">
 								<textarea id="textInput" name="msg" cols="27" rows="5" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
 							</div>
 							<div>
-								<button onclick="generateProcessedLink()" class="bg-light-blue-300 hover:bg-cyan-600 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left">Create card</button>
+								<button onclick="generateProcessedLink()" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left hover:bg-cyan-700 hover:text-white">Create card</button>
 								<p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 140 </p>
 							</div>
 						</div>

@@ -12,6 +12,7 @@ Mvc:
     ✔ Collect usage analytics @done (21-04-25 15:02)
     ✔ User warning when script is disabled. @done (3/20/2021, 4:56:15 PM)
     ☐ Share to social buttons
+    ☐ Preserve main text when changing cards
     Light animations:
         ☐ Shimmer (Loading user msg)
         ☐ Shimmer (getting a link)
@@ -45,9 +46,8 @@ Extensions:
         Business cards:
         ☐ Knowledge•Day
         ☐ TSS
-        ☐ Saaf saans
-    ☐ Webite dark mode
-    ☐ Embeddable html snippets
+        ☐ Saaf Saans
+    ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode. Need to explore)?)
     ☐ Text on the right side for quotes. (Will be covered as a part of Quote card).
     ☐ HTML Canvas show for square card
     ☐ User info collection
@@ -55,13 +55,15 @@ Extensions:
     ☐ User logging
     ☐ Card chains (like twitter thread)
     ☐ Twitter thread unroll bot into tenor cards
-    ☐ Instagram thread unroll bot into tenor cards
 
 Explore:
     
+    ☐ Common function for all the fields on the different card types
+    ☐ Provide embeddable cards for websites and blogs.
     ☐ Card preview on sharing link on social networks
     ☐ Load twitter thread on client side
     ☐ Micro blogging possibility with cards
+    ☐ Instagram thread unroll bot into tenor cards
 
 Archive:
 
