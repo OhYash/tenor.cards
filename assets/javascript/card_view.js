@@ -1,4 +1,3 @@
-
 /**
  * ASCII to Unicode (decode Base64 to original data)
  * @param {string} b64

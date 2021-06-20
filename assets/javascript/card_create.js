@@ -11,6 +11,7 @@ function utoa(data) {
 
 /**
  * Generate the processed link for the input text converted to Base64 
+ * @param {string} cardName
  */
 function generateProcessedLink(cardName = null) {
 	let text = document.getElementById("textInput").value;
@@ -32,7 +33,7 @@ function generateProcessedLink(cardName = null) {
 }
 
 /**
- * Utitlity method to select and copy text from box to system clipboard
+ * Utility method to select and copy text from box to system clipboard
  */
 function copyToClipboard() {
 	var copyText = document.getElementById("browsableLink");
@@ -50,7 +51,7 @@ function dispTextCount() {
 	let text = document.getElementById("textInput").value;
 	let textLength = text.length;
 	//if (length === 140)
-		// set color of 'inputCountStat' object to light red  	
+		// animate and glow 'inputCountStat' object
 		// Also, revert back to original color if not present
 	document.getElementById("inputCountStat").innerHTML = textLength;
 }
