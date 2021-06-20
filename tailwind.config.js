@@ -5,14 +5,13 @@ module.exports = {
     enabled: true,
     content: [
       './index.html',
-      './views/*.html',
-      './assets/javascript/main.js'
+      './cards/*.html'
     ]
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-		colors: {
+		  colors: {
         'light-blue': colors.lightBlue,
         cyan: colors.cyan,
       },

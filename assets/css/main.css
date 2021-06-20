@@ -245,11 +245,6 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-[type='search'] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
 /**
 Remove the inner padding in Chrome and Safari on macOS.
 */
@@ -544,6 +539,28 @@ video {
   border-color: rgba(209, 213, 219, var(--tw-divide-opacity));
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
@@ -579,9 +596,9 @@ video {
   background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
 }
 
-.hover\:bg-cyan-600:hover {
+.hover\:bg-cyan-700:hover {
   --tw-bg-opacity: 1;
-  background-color: rgba(8, 145, 178, var(--tw-bg-opacity));
+  background-color: rgba(14, 116, 144, var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -699,6 +716,10 @@ video {
   flex: none;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .float-right {
   float: right;
 }
@@ -719,12 +740,24 @@ video {
   font-weight: 700;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .h-12 {
   height: 3rem;
 }
 
 .h-14 {
   height: 3.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .text-sm {
@@ -755,6 +788,11 @@ video {
   line-height: 2rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -776,12 +814,12 @@ video {
   margin-top: 1.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .ml-60 {
   margin-left: 15rem;
+}
+
+.-mt-2 {
+  margin-top: -0.5rem;
 }
 
 .max-h-20 {
@@ -805,12 +843,25 @@ video {
   outline-offset: 2px;
 }
 
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .py-1 {
@@ -853,17 +904,36 @@ video {
   padding-bottom: 3rem;
 }
 
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
 .pt-4 {
   padding-top: 1rem;
 }
 
 .pb-4 {
   padding-bottom: 1rem;
+}
+
+.pr-7 {
+  padding-right: 1.75rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.fixed {
+  position: fixed;
 }
 
 .absolute {
@@ -881,8 +951,16 @@ video {
   left: 0px;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .bottom-0 {
   bottom: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
 }
 
 .resize-none {
@@ -927,6 +1005,11 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+}
+
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgba(156, 163, 175, var(--tw-text-opacity));
@@ -935,11 +1018,6 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
 }
 
 .text-gray-700 {
@@ -977,6 +1055,11 @@ video {
   color: rgba(8, 145, 178, var(--tw-text-opacity));
 }
 
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 .hover\:text-cyan-200:hover {
   --tw-text-opacity: 1;
   color: rgba(165, 243, 252, var(--tw-text-opacity));
@@ -987,12 +1070,21 @@ video {
   color: rgba(34, 211, 238, var(--tw-text-opacity));
 }
 
+.focus\:text-white:focus {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
 .italic {
   font-style: italic;
 }
 
 .hover\:underline:hover {
   text-decoration: underline;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .w-12 {
@@ -1029,6 +1121,12 @@ video {
 
 .-skew-y-6 {
   --tw-skew-y: -6deg;
+}
+
+.transition-colors {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .transition-opacity {
@@ -1116,6 +1214,10 @@ video {
     border-radius: 1.5rem;
   }
 
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1159,11 +1261,6 @@ video {
 
   .sm\:p-20 {
     padding: 5rem;
-  }
-
-  .sm\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
   }
 
   .sm\:-rotate-6 {
@@ -1213,10 +1310,6 @@ video {
   .lg\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
-  }
-
-  .lg\:fixed {
-    position: fixed;
   }
 }
 
