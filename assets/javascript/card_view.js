@@ -23,7 +23,7 @@ function processPathParams(customFunc = null) {
         if (customFunc)
             customFunc(urlParams);
 
-        parent.document.getElementById('createCardOption').style.display = "block";
+        parent.document.getElementById('CreateCardOption').style.display = "block";
     }
     if (urlParams.has('bg'))
     {
