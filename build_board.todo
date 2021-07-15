@@ -2,7 +2,7 @@ tenor.cards:
     Extremely easy to use message card generator. Allows everyone to share small ( < 140 ) text messages with friends and the internet.
 
     Build tailwindcss:
-        $ npx tailwindcss build assets/css/twind.css -o assets/css/main.css
+        $ npx tailwindcss build -i assets/css/twind.css -o assets/css/main.css
 
 Mvc:
     
@@ -14,7 +14,7 @@ Mvc:
     ☐ Share to social buttons
     ☐ Preserve main text when changing cards
     Light animations:
-        ☐ Shimmer (Loading user msg)
+        ✔ Shimmer (Loading user msg) @done (21-07-06 15:56)
         ☐ Shimmer (getting a link)
     Remove new lines during input or add newline(\n) support:
         ✔ Add new line support @done (21-06-14 00:33)

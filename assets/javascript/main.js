@@ -32,9 +32,26 @@ function pageLoadMain() {
 }
 
 /**
+ * Hide iFrame and show shimmer
+ */
+function hideIFrame() {
+	document.getElementById("CardShimmer").style.display = "block";
+	document.getElementById("MainCard").style.display = "none";
+}
+
+/**
+ * Hide shimmer and show iFrame data
+ */
+function showIFrame() {
+	document.getElementById("CardShimmer").style.display = "none";
+	document.getElementById("MainCard").style.display = "block";
+}
+
+/**
  * Loads the card page selected in 'CardSelectorForm' 
  */
 function loadCard() {
+	hideIFrame();
 	let cname = document.getElementById("CardSelector").value;
 	let cpath = ctToFilename(cname);
 	document.getElementById('MainCard').src = cpath;
