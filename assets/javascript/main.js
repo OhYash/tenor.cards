@@ -54,7 +54,11 @@ function loadCard() {
 	hideIFrame();
 	let cname = document.getElementById("CardSelector").value;
 	let cpath = ctToFilename(cname);
-	document.getElementById('MainCard').src = cpath;
+	let cardIFrame = document.getElementById('MainCard');
+	if (cardIFrame.src === cpath)
+		showIFrame();
+	else
+		cardIFrame.src = cpath;
 }
 
 /**
