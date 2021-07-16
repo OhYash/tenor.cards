@@ -56,3 +56,13 @@ function loadCard() {
 	let cpath = ctToFilename(cname);
 	document.getElementById('MainCard').src = cpath;
 }
+
+/**
+ * This is required to prevent iframe from collapsing when screen size is small.
+ * Doens't seem to make too much a differenc, can be removed if entirely useless.
+ * Source: https://stackoverflow.com/a/9976309/11846245
+ */
+function resizeIframe(obj) {
+	showIFrame();
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+}

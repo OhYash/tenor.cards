@@ -557,10 +557,6 @@ video {
   pointer-events: none;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -582,10 +578,6 @@ video {
 
 .right-0 {
   right: 0px;
-}
-
-.bottom-0 {
-  bottom: 0px;
 }
 
 .float-right {
@@ -1081,20 +1073,12 @@ video {
   padding-top: 2rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
-}
-
 .pr-7 {
   padding-right: 1.75rem;
 }
 
 .pb-4 {
   padding-bottom: 1rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .font-sans {

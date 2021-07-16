@@ -28,6 +28,7 @@ Bugs:
     ✔ Update the default text. @done (3/20/2021, 4:56:25 PM)
     ✔ Crashes on emoji input. Handle @done (5/16/2021, 10:42:42 PM)
     ☐ Crashes on tilde(~) input. Handle.
+    ☐ [Important!] Iframe ontent hides behind header and footer on trying to type on mobile.
 
 To be tested:
     
@@ -47,6 +48,7 @@ Extensions:
         ☐ Knowledge•Day
         ☐ TSS
         ☐ Saaf Saans
+    ☐ Small header on mobile phones.
     ☐ Light up the text limit bar when user tries to enter > char limit. Something like how terminology lights up when pressing illegal key.
     ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode. Need to explore)?)
     ☐ Text on the right side for quotes. (Will be covered as a part of Quote card).

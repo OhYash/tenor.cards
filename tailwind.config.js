@@ -17,6 +17,10 @@ module.exports = {
       },
       boxShadow: {
         'neumorphic': '11px 11px 22px #bdbdbd, -11px -11px 22px #ffffff'
+      },
+      minHeight: {
+        'maxc': 'max-content',
+        '1/2': '50%'
       }
 	  },
   },
