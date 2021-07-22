@@ -5,24 +5,27 @@ const absolutePath = 'https://tenor.cards/';
  * @param {string} data
  * @return {string}
  */
-function utoa(data) {
-	return btoa(encodeURIComponent(data));
+function utoa(text) {
+	let filteredText = text.replaceAll("[^\\p{L}\\p{N}\\p{P}\\p{Z}]", "");
+	return btoa(encodeURIComponent(filteredText));
 }
 
 /**
  * Generate the processed link for the input text converted to Base64 
  * @param {string} cardName
  */
-function generateProcessedLink(cardName = null) {
+function generateProcessedLink(cardName = null, customFunc = null) {
 	let text = document.getElementById("textInput").value;
 
 	document.getElementById('urlAccess').style.display = "none";
 
 	if(text && text.length != 0) {
-		let filteredText = text.replaceAll("[^\\p{L}\\p{N}\\p{P}\\p{Z}]", "");
-		let encodedString = utoa(filteredText);
+		let encodedString = utoa(text);
 		let url = absolutePath + "?p=" + encodedString;
 		
+        if (customFunc)
+            url += customFunc();
+
 		if (cardName && cardName.length != 0)
 			url += "&ct=" + cardName;
 
@@ -52,4 +55,23 @@ function dispTextCount() {
 	let text = document.getElementById("textInput").value;
 	let textLength = text.length;
 	document.getElementById("inputCountStat").innerHTML = textLength;
+}
+
+/********************* Custom functions below *********************/
+
+/**
+ * Extra fields processor for the quote card
+ */
+function generateQuoteExtraParams() {
+	let result = "";
+	let name = document.getElementById("mtNameInput").value;
+	if(name && name.length != 0) {
+        result = "&n=" + utoa(name);
+    }
+
+    let desc = document.getElementById("mtDescInput").value;
+	if(desc && desc.length != 0) {
+        result += "&d=" + utoa(desc);
+    }
+    return result;
 }

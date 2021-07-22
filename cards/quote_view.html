@@ -9,9 +9,34 @@
 		<script type="text/javascript" src="./../assets/javascript/card_view.js"></script>
 		<script type="text/javascript" src="./../assets/javascript/parsemsg-js/parsemsg.js"></script>
 	</HEAD>
-	<BODY onload="processPathParams(<custom func here>)">
+	<BODY onload="processPathParams(processQuoteExtraParams)">
 		<div class="p-8 flex flex-col justify-center items-center h-screen">
-			Coming soon...
+			<figure class="shadow-lg rounded-xl flex-none min-w-20 max-w-md mx-auto md:w-xl" style="transform: rotate(-2deg) translateZ(0px);">
+				<blockquote class="rounded-t-xl bg-white px-8 py-6 md:p-7 text-lg md:text-xl leading-8 md:leading-8 font-semibold text-gray-900">
+					<svg width="45" height="36" class="mb-5 fill-current text-cyan-100">
+						<path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path>
+					</svg>
+					<div id="dispMsg" class="divide-y divide-gray-300">
+							<div class="text-base pb-4 text-gray-700 sm:text-xl sm:leading-7">
+							<p id='MessageText'>Could not load the text. Either of these could be the possible reasons:
+								<br /><br />
+								&nbsp;&nbsp;•&nbsp; URL is broken<br />
+								&nbsp;&nbsp;•&nbsp; javascript is disabled<br />
+								&nbsp;&nbsp;•&nbsp; The sender added some unsupported text<br />
+							</p>
+						</div>
+						<!--div class="text-base pt-4 font-bold text-gray-400 sm:text-lg">
+							<p>Powered by <a class="text-cyan-600 hover:text-cyan-400" href="/">tenor.cards</a></p>
+						</div-->
+					</div>
+				</blockquote>
+				<figcaption class="flex items-center space-x-4 p-6 md:px-10 md:py-6 bg-gradient-to-br rounded-b-xl leading-6 font-semibold text-white from-cyan-400 to-light-blue-500">
+					<div class="flex-auto">
+						<span id="mtName"></span>
+						<span id="mtDesc" class="text-cyan-100"></span>
+					</div>
+				</figcaption>
+			</figure>
 		</div>
 	</BODY>
 </HTML>

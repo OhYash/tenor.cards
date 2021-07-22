@@ -31,3 +31,24 @@ function processPathParams(customFunc = null) {
         document.body.style.backgroundColor = bgColor;
     }
 }
+
+/********************* Custom functions below *********************/
+
+/**
+ * Extra fields processor for the quote card
+ * @param {json obj} URL Params
+ */
+function processQuoteExtraParams(urlParams) {
+    if (urlParams.has('n')) // Name
+    {
+        let decryptedDataParam = atou(urlParams.get('n')); // base64 decode
+        let parsedMessage = parseTenorCardsMessage(decryptedDataParam);
+        document.getElementById('mtName').innerHTML = parsedMessage + '<BR />';
+    }
+    if (urlParams.has('d')) // Description
+    {
+        let decryptedDataParam = atou(urlParams.get('d')); // base64 decode
+        let parsedMessage = parseTenorCardsMessage(decryptedDataParam);
+        document.getElementById('mtDesc').innerHTML = parsedMessage;
+    }
+}

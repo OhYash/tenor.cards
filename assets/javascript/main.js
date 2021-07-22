@@ -55,9 +55,7 @@ function loadCard() {
 	let cname = document.getElementById("CardSelector").value;
 	let cpath = ctToFilename(cname);
 	let cardIFrame = document.getElementById('MainCard');
-	if (cardIFrame.src === cpath)
-		showIFrame();
-	else
+	if (cardIFrame.src !== cpath)
 		cardIFrame.src = cpath;
 }
 
@@ -66,7 +64,7 @@ function loadCard() {
  * Doens't seem to make too much a differenc, can be removed if entirely useless.
  * Source: https://stackoverflow.com/a/9976309/11846245
  */
-function resizeIframe(obj) {
+function resizeAndShowIframe(obj) {
 	showIFrame();
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
 }
