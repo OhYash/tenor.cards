@@ -75,3 +75,33 @@ function generateQuoteExtraParams() {
     }
     return result;
 }
+
+/**
+ * Extra fields processor for the TSS card
+ */
+function generateTssExtraParams() {
+	let result = "";
+	var data = document.getElementById("mtMkt").value;
+	if(data && data.length != 0) {
+        result = "&m=" + utoa(data);
+    }
+
+    data = document.getElementById("mtMsg").value;
+	if(data && data.length != 0) {
+        result += "&d=" + utoa(data);
+    }
+    data = document.getElementById("mtEntP").value;
+	if(data && data.length != 0) {
+        result += "&en=" + data;
+    }
+
+    data = document.getElementById("mtExtP").value;
+	if(data && data.length != 0) {
+        result += "&ex=" + data;
+    }
+    let lev = document.getElementById("mtLev").value;
+	if(lev && lev > 1) {
+        result += "&l=" + lev.toString();
+    }
+    return result;
+}

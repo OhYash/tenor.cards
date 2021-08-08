@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tenor Cards</title>
+		<base target="_parent">
+		<link href="./../assets/css/main.css" rel="stylesheet" />
+		<script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
+	</HEAD>
+	<BODY>
+		<div class="pt-8 flex flex-col justify-center h-screen">
+			<div class="sm:max-w-xl sm:mx-auto">
+				<div class="px-4 py-6 font-sans bg-gradient-to-r from-black to-green-900 shadow-neumorphic sm:rounded-2xl sm:p-8">
+					<div class="min-w-20 max-w-md mx-auto">
+						<!-- Input message -->
+						<div id="inputMsg" class="divide-y divide-gray-600">
+							<div class="flex flex-row pb-4 sm:justify-between md:w-96">
+								<div>
+									<img src="./../assets/images/tss_logo.png" alt="Traders skool Logo" class="h-16" />
+								</div>
+								<div class="flex flex-col justify-center font-bold text-gray-200 px-4">
+									<a href="https://t.me/tsscrypto"><img src="https://1000logos.net/wp-content/uploads/2020/09/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
+									<a href="https://twitter.com/wickhunterr"><img src="https://1000logos.net/wp-content/uploads/2017/06/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
+								</div>
+							</div>
+							<div class="py-4 px-5">
+								<div class="text-base pl-2 text-gray-50 sm:text-xl sm:leading-8">
+									Coin: <input id='textInput' type="text" placeholder="COIN" class="bg-transparent bg-opacity-25 border-none outline-none placeholder-gray-300 w-24" required /><br/>
+									Market: <input id="mtMkt" type="text" value="USDT" class="bg-transparent border-none outline-none w-24" /><br/>
+									Message: <input id="mtMsg" type="text" class="bg-transparent border-none outline-none" value="T1 Done"/><br/>
+									Entry price: <input id="mtEntP" type="text" placeholder="0.00" class="bg-transparent border-none outline-none placeholder-gray-300 w-36" required /><br/>
+									Target price: <input id="mtExtP" type="text" placeholder="0.00" class="bg-transparent border-none outline-none placeholder-gray-300 w-36" required /><br/>
+									Leverage: <input id="mtLev" type="number" value="1" class="bg-transparent border-none outline-none text-gray-200 w-10" />x<br/>
+								</div>
+							</div>
+							<div class="pt-4 flex flex-col ">
+								<button onclick="generateProcessedLink('h_tss', generateTssExtraParams)" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded hover:bg-cyan-700 hover:text-white">Create card</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center">
+				<div id="urlAccess" class="hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
+					<input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l"></input>
+					<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy link</button>
+				</div>
+			</div> 
+		</div>
+	</BODY>
+</HTML>
