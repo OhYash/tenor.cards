@@ -1,3 +1,6 @@
 [submodule "assets/javascript/parsemsg-js"]
 	path = assets/javascript/parsemsg-js
 	url = https://github.com/OhYash/parsemsg-js.git
+[submodule "assets/javascript/canvas2image"]
+	path = assets/javascript/canvas2image
+	url = https://github.com/hongru/canvas2image.git

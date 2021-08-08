@@ -24,7 +24,19 @@ function pageLoadMain() {
 	// hide the dropdown, set card html, set params, call the iframe
 	if (urlParams.has('ct')) // Card Type
 	{
-		document.getElementById("CardSelector").value = urlParams.get('ct');
+		let ctval = urlParams.get('ct');
+		let cardSelector = document.getElementById("CardSelector");
+
+		if (ctval.startsWith('h_'))
+		{
+			let opt = document.createElement('option');
+			ctval = ctval.substring(2);
+			opt.value = ctval;
+			opt.innerHTML = opt.value;
+			cardSelector.appendChild(opt);
+		}
+
+		cardSelector.value = ctval;
 		document.getElementById("CardSelectorForm").style.display = "none";
 	}
 

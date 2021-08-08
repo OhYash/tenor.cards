@@ -5,7 +5,8 @@ module.exports = {
     enabled: true,
     content: [
       './index.html',
-      './cards/*.html'
+      './cards/*.html',
+      './assets/javascript/card_*.js'
     ]
   },
   darkMode: false, // or 'media' or 'class'
