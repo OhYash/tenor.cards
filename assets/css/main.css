@@ -1419,7 +1419,7 @@ video {
   color: #ccf;
   text-shadow:
 			0 0 7px #7af,
-	        0 0 42px #0af
+			0 0 42px #0af
 }
 
 @media (min-width: 640px) {
