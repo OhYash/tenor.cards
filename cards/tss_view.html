@@ -8,10 +8,11 @@
 		<link href="./../assets/css/main.css" rel="stylesheet" />
 		<script type="text/javascript" src="./../assets/javascript/card_view.js"></script>
 		<script type="text/javascript" src="./../assets/javascript/parsemsg-js/parsemsg.js"></script>
+		<script type="text/javascript" src="./../assets/javascript/html2canvas.min.js"></script>
 	</HEAD>
 	<BODY onload="processPathParams(processTssExtraParams)">
 		<div class="pt-8 flex flex-col justify-center h-screen">
-			<div class="sm:max-w-xl sm:mx-auto">
+			<div id="capturable" class="sm:max-w-xl sm:mx-auto">
 				<div class="font-sans bg-gradient-to-r from-black to-green-900 shadow-neumorphic sm:rounded-2xl sm:p-8">
 					<div class="min-w-52 max-w-md mx-auto">
 						<!-- Display message -->
@@ -21,8 +22,8 @@
 									<img src="./../assets/images/tss_logo.png" alt="Traders skool Logo" class="h-16" />
 								</div>
 								<div class="flex flex-col justify-center font-bold text-gray-200 pl-6">
-									<a href="https://t.me/tsscrypto"><img src="https://1000logos.net/wp-content/uploads/2020/09/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
-									<a href="https://twitter.com/wickhunterr"><img src="https://1000logos.net/wp-content/uploads/2017/06/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
+									<a href="https://t.me/tsscrypto"><img src="./../assets/images/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
+									<a href="https://twitter.com/wickhunterr"><img src="./../assets/images/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
 								</div>
 							</div>
 							<div class="flex flex-row justify-between pt-4">
@@ -53,7 +54,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="hidden flex justify-center">
+			<div class="flex justify-center">
 				<div class="py-3 mt-6 sm:max-w-xl sm:mx-auto">
 					<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="captureCard()">Capture</button>
 				</div>

@@ -32,6 +32,18 @@ function processPathParams(customFunc = null) {
     }
 }
 
+function captureCard() {
+    var canvs = document.getElementById('capturable');
+    html2canvas(canvs, {allowTaint : true}).then(function(canvas) {
+                var link = document.createElement("a");
+                document.body.appendChild(link);
+                link.download = "html_image.png";
+                link.href = canvas.toDataURL("image/png");
+                link.target = '_blank';
+                link.click();
+            });
+}
+
 /********************* Custom functions below *********************/
 
 /**
