@@ -1412,7 +1412,7 @@ video {
 			0 0 82px #0fa,
 			0 0 92px #0fa,
 			0 0 102px #0fa,
-		    0 0 152px #0fa
+			0 0 152px #0fa
 }
 
 .text-neon-blue {
@@ -1450,6 +1450,10 @@ video {
 
   .sm\:justify-between {
     justify-content: space-between;
+  }
+
+  .sm\:rounded-md {
+    border-radius: 0.375rem;
   }
 
   .sm\:rounded-2xl {
