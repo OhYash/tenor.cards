@@ -11,31 +11,34 @@
 	<BODY>
 		<div class="pt-8 flex flex-col justify-center h-screen">
 			<div class="sm:max-w-xl sm:mx-auto">
-				<div class="px-4 py-6 font-sans bg-gradient-to-r from-black to-green-900 shadow-neumorphic sm:rounded-md sm:p-8">
+				<div class="p-5 font-sans bg-gradient-to-r from-black to-green-900 shadow-neumorphic sm:rounded-md">
 					<div class="min-w-20 max-w-md mx-auto">
 						<!-- Input message -->
 						<div id="inputMsg" class="divide-y divide-gray-600">
-							<div class="flex flex-row pb-4 sm:justify-between md:w-96">
+							<div class="flex flex-row pb-2 sm:justify-between">
 								<div>
-									<img src="./../assets/images/tss_logo.png" alt="Traders skool Logo" class="h-16" />
+									<img src="./../assets/images/tssp_logo.png" alt="Traders skool Logo" class="h-24 px-8" />
 								</div>
-								<div class="flex flex-col justify-center font-bold text-gray-200 px-4">
-									<a href="https://t.me/tsscrypto"><img src="https://1000logos.net/wp-content/uploads/2020/09/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
-									<a href="https://twitter.com/wickhunterr"><img src="https://1000logos.net/wp-content/uploads/2017/06/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
+								<div class="flex flex-col justify-center font-bold text-gray-200 px-6 leading-7">
+									<a href="https://t.me/tsscrypto"><img src="./../assets/images/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
+									<a href="https://twitter.com/wickhunterr"><img src="./../assets/images/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
 								</div>
 							</div>
-							<div class="py-4 px-5">
+							<div class="py-2 px-5">
 								<div class="text-base pl-2 text-gray-50 sm:text-xl sm:leading-8">
 									Coin: <input id='textInput' type="text" placeholder="COIN" class="bg-transparent bg-opacity-25 border-none outline-none placeholder-gray-300 w-24" required /><br/>
 									Market: <input id="mtMkt" type="text" value="USDT" class="bg-transparent border-none outline-none w-24" /><br/>
 									Message: <input id="mtMsg" type="text" class="bg-transparent border-none outline-none" value="T1 Done"/><br/>
 									Entry price: <input id="mtEntP" type="text" placeholder="0.00" class="bg-transparent border-none outline-none placeholder-gray-300 w-36" required /><br/>
 									Target price: <input id="mtExtP" type="text" placeholder="0.00" class="bg-transparent border-none outline-none placeholder-gray-300 w-36" required /><br/>
+									Time: <input id="mtTim" type="text" value="0" class="bg-transparent border-none outline-none placeholder-gray-300 w-10" /><select id="mtPrd" class="inline bg-transparent pr-7 py-1 text-gray-100 font-bold text-md focus:outline-none focus:text-white transition-colors duration-200">
+										<option value="day">Days</option>
+										<option value="hour">Hours</option>
+										<option value="minute">Minutes</option>
+                            		</select><br/>
+                            		<button onclick="generateProcessedLink('h_tss', generateTssExtraParams)" class="bg-light-blue-300 text-gray-800 font-bold px-2 rounded hover:bg-cyan-700 hover:text-white float-right">Create card</button>
 									Leverage: <input id="mtLev" type="number" value="1" class="bg-transparent border-none outline-none text-gray-200 w-10" />x<br/>
 								</div>
-							</div>
-							<div class="pt-4 flex flex-col ">
-								<button onclick="generateProcessedLink('h_tss', generateTssExtraParams)" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded hover:bg-cyan-700 hover:text-white">Create card</button>
 							</div>
 						</div>
 					</div>

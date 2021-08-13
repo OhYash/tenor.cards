@@ -13,6 +13,7 @@ Mvc:
     ✔ User warning when script is disabled. @done (3/20/2021, 4:56:15 PM)
     ☐ Share to social buttons
     ☐ Preserve main text when changing cards
+        ☐ Preserve all text when changing cards
     Light animations:
         ✔ Shimmer (Loading user msg) @done (21-07-06 15:56)
         ☐ Shimmer (getting a link)
@@ -29,8 +30,9 @@ Bugs:
     ✔ Crashes on emoji input. Handle @done (5/16/2021, 10:42:42 PM)
     ✘ Crashes on tilde(~) input. Handle. @cancelled (21-07-23 01:44)
     ✔ [Important!] Iframe ontent hides behind header and footer on trying to type on mobile. @done (21-07-23 01:40)
-    ☐ Loads iFrame twice on pageload
+    ✔ Loads iFrame twice on pageload @done (21-08-10 00:14)
     ✔ Only loads cards which have a value in the card selector dropdown. @done (21-08-08 22:57)
+    ☐ Capture (Html2canvas) is not working properly. (Not good on Blink based, worse on firefox)
 
 To be tested:
     
@@ -47,18 +49,18 @@ Extensions:
         ✔ Quote card @done (21-07-23 03:12)
             ☐ Responsive design
         ☐ Plain (with background)
-        Business cards:
+        Partnership cards:
         ☐ Knowledge•Day
         ✔ TSS @done (21-08-08 22:59)
         ☐ Saaf Saans
     ☐ Small header on mobile phones.
     ☐ Light up the text limit bar when user tries to enter > char limit. Something like how terminology lights up when pressing illegal key.
     ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode. Need to explore)?)
-    ☐ Text on the right side for quotes. (Will be covered as a part of Quote card).
+    ✘ Text on the right side for quotes. (Will be covered as a part of Quote card). @cancelled (21-08-10 00:22)
     ☐ HTML Canvas show for square card
     ✔ HTML Canvas screenshot @done (21-08-09 00:35)
     ☐ User info collection
-    ☐ Database
+    ☐ Backend. Database, APIs, 
     ☐ User logging
     ☐ Card chains (like twitter thread)
     ☐ Twitter thread unroll bot into tenor cards

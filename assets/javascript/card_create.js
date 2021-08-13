@@ -94,7 +94,6 @@ function generateTssExtraParams() {
 	if(data && data.length != 0) {
         result += "&en=" + data;
     }
-
     data = document.getElementById("mtExtP").value;
 	if(data && data.length != 0) {
         result += "&ex=" + data;
@@ -102,6 +101,11 @@ function generateTssExtraParams() {
     let lev = document.getElementById("mtLev").value;
 	if(lev && lev > 1) {
         result += "&l=" + lev.toString();
+    }
+    data = document.getElementById("mtTim").value;
+    let period = document.getElementById("mtPrd").value;
+	if(data && data !== "0") {
+        result += "&tp=" + utoa(data + " " + period + (data === "1" ? "" : "s"));
     }
     return result;
 }

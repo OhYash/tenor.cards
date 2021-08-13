@@ -107,5 +107,8 @@ function processTssExtraParams(urlParams) {
 
         if (leverage != 1)
             document.getElementById('mtLev').innerHTML = 'With ' + leverage + 'x leverage';
+
+        if (urlParams.has('tp')) // Timeperiod eg: 3 Days
+            document.getElementById('mtPrd').innerHTML = 'in ' + atou(urlParams.get('tp'));
     }
 }
