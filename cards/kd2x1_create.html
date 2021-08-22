@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tenor Cards</title>
+		<base target="_parent">
+		<link href="./../assets/css/main.css" rel="stylesheet" />
+		<script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
+	</HEAD>
+	<BODY>
+		<div class="flex flex-col justify-center h-screen">
+			<div class="sm:max-w-xl sm:mx-auto">
+				<div class="px-4 py-12 font-sans bg-yellow-50 shadow-neumorphic sm:rounded-2xl sm:p-20">
+					<div class="min-w-20 max-w-md mx-auto">
+						<!-- Input message -->
+						<div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+							<H1 class="text-center font-bold">KD 2x1 Post</H1>
+							<div class="text-base sm:text-xl sm:leading-8">
+								<input id='textInput' type="text" placeholder="Title" class="my-2 w-full" required /><br/>
+								<textarea id="mtDesc" name="msg" cols="27" rows="5" maxlength="300" wrap="soft" placeholder="Description" class="overflow-hidden border-none w-full"></textarea>
+								<input id="mtImage" type="text" class="my-2 w-full" placeholder="Hero URL" /><br/>
+								<div class="flex flex-row justify-between">
+									<select id="mtBg" class="inline bg-transparent py-1 text-black font-bold text-md transition-colors">
+										<option value="white">White</option>
+										<option value="lgray">Light Gray</option>
+			                            <option value="lgreen">Light Green</option>
+			                            <option value="lblue">Light Blue</option>
+			                            <option value="orange">Orange</option>
+			                            <option value="yellow">Yellow</option>
+			                            <option value="red">Red</option>
+			                            <option value="dblue">Dark blue</option>
+			                            <option value="dgreen">Dark green</option>
+			                            <option value="purple">Purple</option>
+	                        		</select>
+									<input id="mtIssue" type="text" class="w-24" placeholder="Issue #" />
+	                        		<button onclick="generateProcessedLink('h_kd2x1', generateKdExtraParams)" class="bg-light-blue-300 text-gray-800 font-bold px-2 rounded hover:bg-cyan-700 hover:text-white">Create card</button>
+	                        	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center">
+				<div id="urlAccess" class="hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
+					<input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l"></input>
+					<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy link</button>
+				</div>
+			</div> 
+		</div>
+	</BODY>
+</HTML>

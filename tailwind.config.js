@@ -22,6 +22,10 @@ module.exports = {
       minHeight: {
         'maxc': 'max-content',
         '1/2': '50%'
+      },
+      spacing: {
+         '512': '512px',
+         '1024': '1024px'
       }
 	  },
   },

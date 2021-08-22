@@ -23,7 +23,9 @@ function processPathParams(customFunc = null) {
         if (customFunc)
             customFunc(urlParams);
 
-        parent.document.getElementById('CreateCardOption').style.display = "block";
+        let parentCreateCardOptn = parent.document.getElementById('CreateCardOption');
+        if (parentCreateCardOptn)
+            parentCreateCardOptn.style.display = "block";
     }
     if (urlParams.has('bg'))
     {
@@ -45,6 +47,52 @@ function captureCard() {
 }
 
 /********************* Custom functions below *********************/
+
+/**
+ * Extra param to load up the selected background into the card body.
+ * @param {json obj} URL Params
+ */
+function processBgExtraParam(urlParams) {
+    if (urlParams.has('cbg')) // Background
+    {
+        let colorCode = '';
+        switch (urlParams.get('cbg')) {
+            case 'lgray':
+                colorCode = "bg-gray-200";
+                break;
+            case 'lgreen':
+                colorCode = "bg-green-400";
+                break;
+            case 'lblue':
+                colorCode = "bg-blue-400";
+                break;
+            case 'orange':
+                colorCode = "bg-yellow-500";
+                break;
+            case 'yellow':
+                colorCode = "bg-yellow-200";
+                break;
+            case 'red':
+                colorCode = "bg-red-600";
+                break;
+            case 'dblue':
+                colorCode = "bg-blue-900";
+                break;
+            case 'dgreen':
+                colorCode = "bg-green-800";
+                break;
+            case 'purple':
+                colorCode = "bg-purple-600";
+                break;
+            case 'pink':
+                colorCode = "bg-pink-400";
+                break;
+            default:
+                colorCode = "bg-white";
+        }
+        document.getElementById('capturable').classList.add(colorCode);
+    }
+}
 
 /**
  * Extra fields processor for the quote card
@@ -111,4 +159,29 @@ function processTssExtraParams(urlParams) {
         if (urlParams.has('tp')) // Timeperiod eg: 3 Days
             document.getElementById('mtPrd').innerHTML = 'in ' + atou(urlParams.get('tp'));
     }
+}
+
+/**
+ * Extra fields processor for the KD instagram post card (2x1 left)
+ * @param {json obj} URL Params
+ */
+function processKD2x1ExtraParams(urlParams) {
+    console.log("test");
+    if (urlParams.has('d')) // Desc
+    {
+        let decryptedDataParam = atou(urlParams.get('d')); // base64 decode
+        let parsedMessage = parseTenorCardsMessage(decryptedDataParam);
+        document.getElementById('mtDesc').innerHTML = parsedMessage;
+    }
+    if (urlParams.has('i')) // Hero Image
+    {
+        let decryptedDataParam = atou(urlParams.get('i')); // base64 decode
+        document.getElementById('mtImage').src = decryptedDataParam;
+    }
+    if (urlParams.has('n')) // Issue number
+    {
+        let issueNum = urlParams.get('n');
+        document.getElementById('mtIssue').innerHTML = issueNum;
+    }
+    processBgExtraParam(urlParams);
 }

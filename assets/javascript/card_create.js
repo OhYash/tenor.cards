@@ -60,6 +60,13 @@ function dispTextCount() {
 /********************* Custom functions below *********************/
 
 /**
+ * Custom param to pass background for the target card. Useful for instagram post cards.
+ */
+function selectBgExtraParam() {
+    return "&cbg=" + document.getElementById("mtBg").value;
+}
+
+/**
  * Extra fields processor for the quote card
  */
 function generateQuoteExtraParams() {
@@ -109,3 +116,24 @@ function generateTssExtraParams() {
     }
     return result;
 }
+
+/**
+ * Extra fields processor for KD 2x1 instagram card 
+ */
+ function generateKdExtraParams() {
+ 	let result = '';
+ 	var data = document.getElementById("mtDesc").value;
+ 	if (data && data.length != 0) {
+ 		result += "&d=" + utoa(data);
+ 	}
+ 	data = document.getElementById("mtImage").value;
+ 	if (data && data.length != 0) {
+ 		result += "&i=" + utoa(data);
+ 	}
+ 	data = document.getElementById("mtIssue").value;
+ 	if (data && data.length != 0) {
+ 		result += "&n=" + data;
+ 	}
+ 	result += selectBgExtraParam();
+ 	return result;
+ }
