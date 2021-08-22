@@ -11,6 +11,7 @@ Mvc:
     ✔ Card input (, input limit, card button, display text stat) @done (2/25/2021, 12:31:28 AM)
     ✔ Collect usage analytics @done (21-04-25 15:02)
     ✔ User warning when script is disabled. @done (3/20/2021, 4:56:15 PM)
+    ☐ SEO and Other robot header tags
     ☐ Share to social buttons
     ☐ Preserve main text when changing cards
         ☐ Preserve all text when changing cards
@@ -53,6 +54,7 @@ Extensions:
         ✔ Knowledge•Day @done (21-08-22 14:22)
         ✔ TSS @done (21-08-08 22:59)
         ☐ Saaf Saans
+    ☐ Custom card business page
     ☐ Small header on mobile phones.
     ☐ Light up the text limit bar when user tries to enter > char limit. Something like how terminology lights up when pressing illegal key.
     ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode. Need to explore)?)

@@ -1,65 +1,66 @@
 <!DOCTYPE HTML>
 <HTML>
-	<HEAD>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tenor Cards</title>
-		<base target="_parent">
-		<link href="./../assets/css/main.css" rel="stylesheet" />
-		<script type="text/javascript" src="./../assets/javascript/card_view.js"></script>
-		<script type="text/javascript" src="./../assets/javascript/parsemsg-js/parsemsg.js"></script>
-		<script type="text/javascript" src="./../assets/javascript/html2canvas.min.js"></script>
-	</HEAD>
-	<BODY onload="processPathParams(processTssExtraParams)">
-		<div class="pt-8 flex flex-col justify-center h-screen">
-			<div id="capturable" class="sm:mx-auto">
-				<div class="font-sans bg-gradient-to-r from-black to-green-900 shadow-neumorphic p-5 sm:rounded-sm">
-					<div class="min-w-64 mx-auto">
-						<!-- Display message -->
-						<div id="dispMsg" class="divide-y divide-gray-600">
-							<div class="flex flex-row pb-4 sm:justify-between">
-								<div>
-									<img src="./../assets/images/tssp_logo.png" alt="Traders skool Logo" class="h-24 px-8" />
-								</div>
-								<div class="flex flex-col justify-center font-bold text-gray-200 px-6 leading-7">
-									<a href="https://t.me/tsscrypto"><img src="./../assets/images/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
-									<a href="https://twitter.com/wickhunterr"><img src="./../assets/images/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
-								</div>
+<HEAD>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tenor Cards</title>
+	<base target="_parent">
+	<link href="./../assets/css/main.css" rel="stylesheet" />
+	<script type="text/javascript" src="./../assets/javascript/card_view.js"></script>
+	<script type="text/javascript" src="./../assets/javascript/parsemsg-js/parsemsg.js"></script>
+	<script type="text/javascript" src="./../assets/javascript/html2canvas.min.js"></script>
+</HEAD>
+<BODY onload="processPathParams(processTssExtraParams)">
+	<div class="pt-8 flex flex-col justify-center h-screen">
+		<div id="capturable" class="sm:mx-auto">
+			<div class="font-sans bg-gradient-to-r from-black to-green-900 shadow-neumorphic p-5 sm:rounded-sm">
+				<div class="min-w-64 mx-auto">
+					<!-- Display message -->
+					<div id="dispMsg" class="divide-y divide-gray-600">
+						<div class="flex flex-row pb-4 sm:justify-between">
+							<div>
+								<img src="./../assets/images/tssp_logo.png" alt="Traders skool Logo" class="h-24 px-8" />
 							</div>
-							<div class="flex flex-row justify-between pt-4">
-								<div class="text-base pl-2 text-gray-50 sm:text-xl px-8 sm:leading-10">
-									<p class="font-bold text-gray-400 align-center uppercase" style="transform: rotate(-3deg) translateZ(0px);"><span id='MessageText' class="text-4xl text-neon-blue">BTC</span> / <span id="mtMkt">USDT</span>
-									</p>
-									<p class="px-2 py-3 text-gray-400 leading-7 font-bold">
-										<span id="mtDir" class="text-green-200 text-2xl">Long</span>&nbsp; | &nbsp;<span id="mtMsg" class="text-gray-300 text-2xl">T1 Done</span><br/>
-									</p>
-									<p class="text-gray-400 leading-7 font-bold">
-										Entry: <span id="mtEntP" class="text-gray-200">0.00</span><br/>
-										Target: <span id="mtExtP" class="text-gray-200">0.00</span>
-									</p>
-								</div>
-								<div>
-									<p id="mtPerc" class="text-6xl py-5 pb-5 text-neon-green px-8 font-bold" align="center" style="transform: rotate(-10deg) translateZ(0px);">
-										30%
-									</p>
-									<p class="text-gray-300 font-bold" align="center" style="transform: rotate(-2deg) translateZ(0px);">
-										<span id="mtLev">On SPOT</span><br/>
-										<span id="mtPrd"></span>
-								</div>
+							<div class="flex flex-col justify-center font-bold text-gray-200 px-6 leading-7">
+								<a href="https://t.me/tsscrypto"><img src="./../assets/images/Telegram_logo_PNG3.png" alt="telegram logo" class="inline h-5" /> / @tsscrypto</a>
+								<a href="https://twitter.com/wickhunterr"><img src="./../assets/images/Twitter_logo_PNG7.png" alt="twitter logo" class="inline h-5" /> / @wickhunterr</a>
 							</div>
-							<!--div class="text-base pt-4 font-bold text-gray-400 sm:text-lg">
-								<p>Powered by <a class="text-cyan-600 hover:text-cyan-400" href="/">tenor.cards</a></p>
-							</div-->
 						</div>
+						<div class="flex flex-row justify-between pt-4">
+							<div class="text-base pl-2 text-gray-50 sm:text-xl px-8 sm:leading-10">
+								<p class="font-bold text-gray-400 align-center uppercase" style="transform: rotate(-3deg) translateZ(0px);"><span id='MessageText' class="text-4xl text-neon-blue">BTC</span> / <span id="mtMkt">USDT</span>
+								</p>
+								<p class="px-2 py-3 text-gray-400 leading-7 font-bold">
+									<span id="mtDir" class="text-green-200 text-2xl">Long</span>&nbsp; | &nbsp;<span id="mtMsg" class="text-gray-300 text-2xl">T1 Done</span><br/>
+								</p>
+								<p class="text-gray-400 leading-7 font-bold">
+									Entry: <span id="mtEntP" class="text-gray-200">0.00</span><br/>
+									Target: <span id="mtExtP" class="text-gray-200">0.00</span>
+								</p>
+							</div>
+							<div>
+								<p id="mtPerc" class="text-6xl py-5 pb-5 text-neon-green px-8 font-bold" align="center" style="transform: rotate(-10deg) translateZ(0px);">
+									30%
+								</p>
+								<p class="text-gray-300 font-bold" align="center" style="transform: rotate(-2deg) translateZ(0px);">
+									<span id="mtLev">On SPOT</span><br/>
+									<span id="mtPrd"></span>
+								</p>
+							</div>
+						</div>
+						<!--div class="text-base pt-4 font-bold text-gray-400 sm:text-lg">
+							<p>Powered by <a class="text-cyan-600 hover:text-cyan-400" href="/">tenor.cards</a></p>
+						</div-->
 					</div>
 				</div>
 			</div>
-			<div class="flex justify-center">
-				<div class="py-3 mt-4 sm:max-w-xl sm:mx-auto">
-					<a class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" href="/?ct=h_tss">Create another card</a>&nbsp;&nbsp;
-					<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="captureCard()">Capture</button>
-				</div>
-			</div> 
 		</div>
-	</BODY>
+		<div class="flex justify-center">
+			<div class="py-3 mt-4 sm:max-w-xl sm:mx-auto">
+				<a class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" href="/?ct=h_tss">Create another card</a>&nbsp;&nbsp;
+				<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onclick="captureCard()">Capture</button>
+			</div>
+		</div> 
+	</div>
+</BODY>
 </HTML>

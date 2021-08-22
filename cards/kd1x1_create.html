@@ -1,49 +1,49 @@
 <!DOCTYPE HTML>
 <HTML>
-	<HEAD>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tenor Cards</title>
-		<base target="_parent">
-		<link href="./../assets/css/main.css" rel="stylesheet" />
-		<script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
-	</HEAD>
-	<BODY>
-		<div class="flex flex-col justify-center h-screen">
-			<div class="sm:max-w-xl sm:mx-auto">
-				<div class="px-4 py-12 font-sans bg-white shadow-neumorphic sm:rounded-2xl sm:p-20">
-					<div class="min-w-20 max-w-md mx-auto">
-						<!-- Input message -->
-						<div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
-							<div class="flex flex-col items-center">
-								<textarea id="textInput" name="msg" cols="27" rows="5" maxlength="500" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
-							</div>
-							<div>
-								<select id="mtBg" title="Post background" class="block pr-7 my-2 py-1 text-black font-bold text-md transition-colors">
-									<option value="white">White</option>
-									<option value="lgray">Light Gray</option>
-		                            <option value="lgreen">Light Green</option>
-		                            <option value="lblue">Light Blue</option>
-		                            <option value="orange">Orange</option>
-		                            <option value="yellow">Yellow</option>
-		                            <option value="red">Red</option>
-		                            <option value="dblue">Dark blue</option>
-		                            <option value="dgreen">Dark green</option>
-		                            <option value="purple">Purple</option>
-		                        </select>
-								<button onclick="generateProcessedLink('h_kd1x1', selectBgExtraParam)" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left hover:bg-cyan-700 hover:text-white">Create card</button>
-								<p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 500 </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="flex justify-center">
-				<div id="urlAccess" class="hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
-					<input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l"></input>
-					<button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy link</button>
-				</div>
-			</div> 
-		</div>
-	</BODY>
+<HEAD>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tenor Cards</title>
+    <base target="_parent">
+    <link href="./../assets/css/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="./../assets/javascript/card_create.js"></script>
+</HEAD>
+<BODY>
+    <div class="flex flex-col justify-center h-screen">
+        <div class="sm:max-w-xl sm:mx-auto">
+            <div class="px-4 py-12 font-sans bg-white shadow-neumorphic sm:rounded-2xl sm:p-20">
+                <div class="min-w-20 max-w-md mx-auto">
+                    <!-- Input message -->
+                    <div id="inputMsg" class="text-base leading-6 space-y-4 text-gray-700 sm:text-xl sm:leading-7">
+                        <div class="flex flex-col items-center">
+                            <textarea id="textInput" name="msg" cols="27" rows="5" maxlength="500" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
+                        </div>
+                        <div>
+                            <select id="mtBg" title="Post background" class="block pr-7 my-2 py-1 text-black font-bold text-md transition-colors">
+                                <option value="white">White</option>
+                                <option value="lgray">Light Gray</option>
+                                <option value="lgreen">Light Green</option>
+                                <option value="lblue">Light Blue</option>
+                                <option value="orange">Orange</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="red">Red</option>
+                                <option value="dblue">Dark blue</option>
+                                <option value="dgreen">Dark green</option>
+                                <option value="purple">Purple</option>
+                            </select>
+                            <button onclick="generateProcessedLink('h_kd1x1', selectBgExtraParam)" class="bg-light-blue-300 text-gray-800 font-bold py-1 px-4 rounded inline-flex items-center float-left hover:bg-cyan-700 hover:text-white">Create card</button>
+                            <p class="text-gray-400 py-1 font-bold float-right">&nbsp;<span id="inputCountStat">0</span> / 500 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <div id="urlAccess" class="hidden py-3 mt-6 sm:max-w-xl sm:mx-auto">
+                <input id="browsableLink" type="text" value="" class="bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-l"></input>
+                <button class="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r" onclick="copyToClipboard()">Copy link</button>
+            </div>
+        </div> 
+    </div>
+</BODY>
 </HTML>
