@@ -142,7 +142,7 @@ function processTssExtraParams(urlParams) {
         if (urlParams.has('l')) // Leverage/Margin. Eg: 3
             leverage = parseInt(urlParams.get('l'));
 
-        let profitPercentage = (((100 * Math.max(entryPriceParam, exitPriceParam)) / Math.min(entryPriceParam, exitPriceParam)) - 100) * leverage;
+        let profitPercentage = (Math.abs(exitPriceParam - entryPriceParam) / entryPriceParam) * leverage * 100;
         document.getElementById('mtPerc').innerHTML = profitPercentage.toFixed(2)+'%';
 
         if (entryPriceParam > exitPriceParam)
