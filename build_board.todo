@@ -35,10 +35,10 @@ Bugs:
     ✔ Only loads cards which have a value in the card selector dropdown. @done (21-08-08 22:57)
     ✔ TSS: Percentage calculation is incorrect for Short positions. @done (21-08-23 14:09)
     ☐ KD2x1: Left margin not enough for small titles (text falls behind the hero image)
+        > Changes made. To be tested before marking done.
     ☐ Capture (Html2canvas) is not working properly. (Not good on Blink based, worse on firefox)
 
 To be tested:
-    
     ☐ test for non-english languages
         > Tested for Hindi. Supports short text bits. Ideally unusable beyond a few words.
     ✔ Special characters @done (3/20/2021, 2:48:58 PM)
@@ -52,14 +52,17 @@ Extensions:
         ✔ Quote card @done (21-07-23 03:12)
             ☐ Responsive design
         ☐ Plain (with background)
-        Partnership cards:
+        ☐ Password protected card
+            > Encrypt the text with user password. Some simple cipher maybe. Only vieweable by user with apt password
+        ☐ Future unlock cards
+            > Create text message card a date before which the message won't be displayed
+        Partner cards:
         ✔ Knowledge•Day @done (21-08-22 14:22)
         ✔ TSS @done (21-08-08 22:59)
         ☐ Saaf Saans
     ☐ Custom card business page
     ☐ Small header on mobile phones.
     ☐ Light up the text limit bar when user tries to enter > char limit. Something like how terminology lights up when pressing illegal key.
-    ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode. Need to explore)?)
     ✘ Text on the right side for quotes. (Will be covered as a part of Quote card). @cancelled (21-08-10 00:22)
     ☐ HTML Canvas show for square card
     ✔ HTML Canvas screenshot @done (21-08-09 00:35)
@@ -73,6 +76,7 @@ Explore:
     
     ☐ Common function for all the fields on the different card types
     ☐ Provide embeddable cards for websites and blogs.
+    ☐ Webite dark mode (maybe a dark card? or dark mode applicable to all cards (tailwind supports dark mode))
     ☐ Card preview on sharing link on social networks
     ☐ Load twitter thread on client side
     ☐ Micro blogging possibility with cards
