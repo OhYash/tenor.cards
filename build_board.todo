@@ -5,7 +5,6 @@ tenor.cards:
         $ npx tailwindcss build -i assets/css/twind.css -o assets/css/main.css
 
 Mvc:
-    
     ✔ Logo @done (2/25/2021, 12:31:24 AM)
     ✔ Card message display @done (2/25/2021, 12:31:27 AM)
     ✔ Card input (, input limit, card button, display text stat) @done (2/25/2021, 12:31:28 AM)
@@ -26,7 +25,6 @@ Mvc:
         ☐ Add toast or info button with information about formatting in every [_create] card.
     
 Bugs:
-    
     ✔ Update the default text. @done (3/20/2021, 4:56:25 PM)
     ✔ Crashes on emoji input. Handle @done (5/16/2021, 10:42:42 PM)
     ✘ Crashes on tilde(~) input. Handle. @cancelled (21-07-23 01:44)
