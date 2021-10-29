@@ -813,6 +813,14 @@ video {
   transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.-rotate-2 {
+  --tw-rotate: -2deg;
+}
+
+.-skew-x-2 {
+  --tw-skew-x: -2deg;
+}
+
 .-skew-y-6 {
   --tw-skew-y: -6deg;
 }
@@ -1324,6 +1332,11 @@ video {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -1640,8 +1653,8 @@ video {
     --tw-rotate: -6deg;
   }
 
-  .sm\:-rotate-2 {
-    --tw-rotate: -2deg;
+  .sm\:skew-x-0 {
+    --tw-skew-x: 0deg;
   }
 
   .sm\:skew-y-0 {
@@ -1684,6 +1697,10 @@ video {
   .sm\:rounded-b-xl {
     border-bottom-right-radius: 0.75rem;
     border-bottom-left-radius: 0.75rem;
+  }
+
+  .sm\:p-7 {
+    padding: 1.75rem;
   }
 
   .sm\:p-8 {
