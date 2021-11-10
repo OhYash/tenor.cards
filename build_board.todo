@@ -49,6 +49,7 @@ Extensions:
         ✔ Skew card @done (21-06-14 00:34)
         ✔ Quote card @done (21-07-23 03:12)
             ✔ Responsive design @done (21-10-30 00:20)
+            ☐ Add min width properly. Currently workaround is done with style attribute.
         ☐ Plain (with background)
         ☐ Password protected card
             > Encrypt the text with user password. Some simple cipher maybe. Only vieweable by user with apt password
