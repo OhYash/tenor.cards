@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tenor Cards</title>
+	<base target="_parent">
+	<link href="./../assets/css/main.css" rel="stylesheet" />
+	<script type="text/javascript" src="./../assets/javascript/card_view.js"></script>
+	<script type="text/javascript" src="./../assets/javascript/parsemsg-js/parsemsg.js"></script>
+</HEAD>
+<BODY onload="processPathParams(processKD2x1ExtraParams)">
+	<div class="flex flex-col justify-center h-screen">
+		<div id="capturable" class="relative w-512 h-512 flex flex-col justify-center sm:mx-auto">
+			<img id="mtImage" class="absolute top-2 left-8 max-h-44 w-auto filter drop-shadow-2xl" src="https://knowledgeday.in/assets/img/sailboat_hero.jpg" alt="test" width="512" height="384" style="transform: rotate(-6deg) translateZ(0px);" />
+			<div class="font-sans bg-white bg-opacity-80 mt-10 sm:p-8">
+				<div class="">
+					<!-- Display message -->
+					<div class="relative mt-6">
+						<div class="text-base text-xl font-extrabold text-right text-yellow-800 filter drop-shadow">issue #<span id="mtIssue">43</span></div>
+						<div id="dispMsg" class="flex flex-col justify-center divide-y divide-gray-300 h-38">
+							<div id='MessageText' class="text-base pb-4 text-gray-800 text-right ml-14 text-2xl font-extrabold sm:leading-7 filter drop-shadow-lg">
+								Can sailboats sail faster than wind they rely on? Let's find out
+							</div>
+							<div id="mtDesc" class="text-base pt-4 text-center text-gray-600 sm:text-lg">
+								Sailboats are fundamentally very simple boats which are driven through wind only. Or are they?
+								...
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-end text-base font-bold text-gray-500 sm:text-lg float-right">
+				<p class="bg-white bg-opacity-80 px-3"><span class="text-yellow-700 font-extrabold">Knowledge</span><span class="text-gray-600">•</span><span class="text-yellow-700 font-extrabold">Day</span><!--img class="inline h-11 w-11" src="https://knowledgeday.in/assets/img/KD_profile.jpg" alt="kd logo" /--> | Powered by <a class="text-cyan-600 hover:text-cyan-400" href="/">tenor.cards</a></p>
+			</div>
+		</div>
+	</div>
+</BODY>
+</HTML>
