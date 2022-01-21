@@ -16,18 +16,18 @@
 					<svg width="45" height="36" class="mb-5 fill-current text-cyan-100">
 						<path d="M13.415.001C6.07 5.185.887 13.681.887 23.041c0 7.632 4.608 12.096 9.936 12.096 5.04 0 8.784-4.032 8.784-8.784 0-4.752-3.312-8.208-7.632-8.208-.864 0-2.016.144-2.304.288.72-4.896 5.328-10.656 9.936-13.536L13.415.001zm24.768 0c-7.2 5.184-12.384 13.68-12.384 23.04 0 7.632 4.608 12.096 9.936 12.096 4.896 0 8.784-4.032 8.784-8.784 0-4.752-3.456-8.208-7.776-8.208-.864 0-1.872.144-2.16.288.72-4.896 5.184-10.656 9.792-13.536L38.183.001z"></path>
 					</svg>
-					<div class="min-w-60 max-w-md mx-auto">
+					<div class="min-w-96 max-w-md mx-auto">
 						<div id="inputMsg">
 							<div class="flex flex-col items-center">
-								<textarea id="textInput" name="msg" rows="3" maxlength="140" wrap="soft" placeholder="Enter message" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
+								<textarea id="textInput" name="msg" rows="3" maxlength="140" wrap="soft" placeholder="Enter quote" oninput="dispTextCount()" class="overflow-hidden border-none resize-none outline-none"></textarea>
 							</div>
 						</div>
 					</div>
 				</blockquote>
 				<figcaption class="flex items-center space-x-4 p-6 md:px-10 md:py-6 bg-gradient-to-br from-cyan-500 to-light-blue-500 leading-6 font-semibold text-white sm:rounded-b-xl">
 					<div class="flex-auto">
-						<input id="mtNameInput" type="text" placeholder="Name" class="bg-transparent border-none outline-none placeholder-gray-100 pb-1" /><br />
-						<input id="mtDescInput" type="text" placeholder="Desc" class="bg-transparent border-none outline-none placeholder-gray-100 text-cyan-100" />
+						<input id="mtNameInput" type="text" placeholder="Name (optional)" class="bg-cyan-600 border-none outline-none placeholder-gray-200 mb-2 py-1 px-2 " /><br />
+						<input id="mtDescInput" type="text" placeholder="More about them ^ (Optional)" class="bg-cyan-600 border-none outline-none placeholder-gray-200 text-cyan-100 py-1 px-2" />
 					</div>
 					<div class="flex flex-col justify-center items-center float-right">
 						<p class="text-gray-50 py-2 font-bold">&nbsp;<span id="inputCountStat">0</span> / 140 </p>

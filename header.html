@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <TITLE>Tenor Cards</TITLE>
+    <base target="_parent">
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script type="text/javascript" src="./assets/javascript/main.js"></script>
+    <noscript>This website requires javascript to work. It seems to have been disabled. Please enable javascript or use a different browser!</noscript>
+</HEAD>
+<BODY class="flex flex-col bg-gray-50" onload="pageLoadMain()">
+    <!-- Top panel -->
+    <header>
+        <div class="w-full bg-gradient-to-r from-green-600 to-gray-700">
+            <div class="flex flex-col w-full px-4 mx-auto border-gray-2 items-center sm:justify-between sm:flex-row md:px-6 lg:px-20">
+                <a class="px-1 py-1 mt-2 mb-2 text-sm sm:text-2xl font-bold focus:ring-2 transform hover:scale-110" href="/">
+                    <img class="max-h-20" src="./assets/images/logo256_1.png" alt="logo" />
+                </a>
+                <form id="CardSelectorForm" class="relative sm:block">
+                    <label>
+                        <span class="sr-only">Select card type</span>
+                        <select id="CardSelector" title="Card type" class="appearance-none block bg-transparent pr-7 py-1 text-gray-100 font-bold text-md focus:outline-none focus:text-white transition-colors duration-200" onchange="loadCard()">
+                            <option value="simple">Plain</option>
+                            <option value="skew">Skew</option>
+                            <option value="quote">Quote</option>
+                        </select>
+                    </label>
+                    <svg class="w-5 h-5 text-gray-100 absolute top-1/2 right-0 -mt-2 pointer-events-none" fill="currentColor">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
+                    </svg>
+                </form>
+                <div class="flex flex-row">
+                    <a class="p-1 my-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="https://tenor.cards/?p=KlNwZWNpYWwqIG1lc3NhZ2VzIHNob3VsZG4ndCBiZSBib3JpbmcuICBTdG9wIHNlbmRpbmcgYm9yaW5nIG1lc3NhZ2VzLCBzdG9wIGhhdmluZyBhIGJvcmluZyBsaWZlLiBVc2Ugb25lIG9mIHRoZSBkZXNpZ24gY2FyZHMgZnJvbSB0b3AgYW5kIHNwaWNlIHVwIHlvdXIgd29yZHMuISE=">
+                        About
+                    </a>
+                    <span class="p-1 my-2 text-xl font-bold focus:ring-2 text-gray-400">&nbsp;&nbsp;</span>
+                    <a id="CreateCardOption" class="hidden px-1 py-1 mt-2 mb-2 text-xl font-bold focus:ring-2 text-cyan-400 hover:text-cyan-200 hover:underline" href="/">
+                        Create your own card &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+</BODY>
+</HTML>
