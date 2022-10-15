@@ -166,7 +166,6 @@ function processTssExtraParams(urlParams) {
  * @param {json obj} URL Params
  */
 function processKD2x1ExtraParams(urlParams) {
-    console.log("test");
     if (urlParams.has('d')) // Desc
     {
         let decryptedDataParam = atou(urlParams.get('d')); // base64 decode

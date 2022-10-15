@@ -11,13 +11,26 @@ function ctToFilename(ctName) {
 	if (!ctName || ctName.length === 0)
 		ctName = "simple";
 
-	return `./cards/${ctName}_${cardSuffix}.html?${pathSuffix}`;
+	return `../cards/${ctName}_${cardSuffix}.html?${pathSuffix}`;
 }
 
 /**
- * Main processor for the parent page. loads the appropriate card frame with params. 
+ * Main processor for the landing page.
+ * This will redirect to cards page when detected params for backward compatibility.
  */
-function pageLoadMain() {
+function loadMainPage()
+{
+	if (!urlParams)
+		urlParams = new URLSearchParams(location.search);
+
+	if (urlParams.has('ct') || urlParams.has('p')) // Old link detected. Data or card type is defined.
+		window.location = `/design_card${window.location.search}`;
+}
+
+/**
+ * Main processor for the design cards' page. loads the appropriate card frame with params. 
+ */
+function loadSelectedCard() {
 	if (!urlParams)
 		urlParams = new URLSearchParams(location.search);
 
@@ -67,13 +80,14 @@ function loadCard() {
 	let cname = document.getElementById("CardSelector").value;
 	let cpath = ctToFilename(cname);
 	let cardIFrame = document.getElementById('MainCard');
+
 	if (cardIFrame.src !== cpath)
 		cardIFrame.src = cpath;
 }
 
 /**
  * This is required to prevent iframe from collapsing when screen size is small.
- * Doens't seem to make too much a differenc, can be removed if entirely useless.
+ * Doesn't seem to make too much a difference, can be removed if entirely useless.
  * Source: https://stackoverflow.com/a/9976309/11846245
  */
 function resizeAndShowIframe(obj) {
