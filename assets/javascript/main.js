@@ -24,7 +24,9 @@ function loadMainPage()
 		urlParams = new URLSearchParams(location.search);
 
 	if (urlParams.has('ct') || urlParams.has('p')) // Old link detected. Data or card type is defined.
-		window.location = `/design_card${window.location.search}`;
+	{
+		window.location = `/design_card/${window.location.search}`;
+	}
 }
 
 /**
