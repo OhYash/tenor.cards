@@ -36,6 +36,7 @@ Bugs:
     ☐ KD2x1: Left margin not enough for small titles (text falls behind the hero image)
         > Changes made. To be tested before marking done.
     ☐ Capture (Html2canvas) is not working properly. (Not good on Blink based, worse on firefox)
+    ✔ "Create your own card ->" button takes you to landing page instead of create card page. @done (22-10-23 23:48)
 
 To be tested:
     ☐ test for non-english languages
