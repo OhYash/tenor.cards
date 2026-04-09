@@ -1,4 +1,4 @@
-const absolutePath = 'https://tenor.cards/design_card/';
+const absolutePath = 'https://tenor-cards.surge.sh/design_card/';
 
 /**
  * Unicode to ASCII (encode data to Base64) + Some regex based filterations.
